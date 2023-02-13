@@ -8,10 +8,11 @@ import Donate from '../components/Donation'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import data from '../assets/data'
+import Nav from '../components/Nav'
 
 const Home = () => {
   return (
-    <div className='pt-6 md:text-lg sm:text-base'>
+    <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
       <Hero />
       <About />
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonials />
       <Donate datas={data.donations} />
       <Footer />
+      <Nav />
     </div>
   )
 }

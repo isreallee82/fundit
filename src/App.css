@@ -1,11 +1,11 @@
 body {
   position: relative;
 
-  background: radial-gradient(
+  /* background: radial-gradient(
     88.65% 88.65% at 50% 11.35%,
     #715e5e 0%,
     rgba(113, 94, 94, 0.26) 100%
-  );
+  ); */
 }
 
 
