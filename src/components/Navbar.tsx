@@ -6,7 +6,7 @@ const Navbar = () => {
   // const [display, setDisplay] = useState(false)
 
   return (
-    <div className='z-20 flex sticky items-center top-4 md:container md:mx-auto rounded-full flex-row bg-slate-300 xs:gap-0 justify-around md:p-1 sm:my-4'>
+    <div className='z-20 sticky flex xs:mx-4 items-center lg:top-0 xs:top-0 md:container md:mx-auto rounded-full flex-row  bg-stone-100 bg-opacity-60 backdrop-filter backdrop-blur-lg xs:gap-0 sm:justify-around xs:justify-between md:p-1 sm:my-4'>
       <div className='lg:flex md:gap-6 xs:hidden sm:gap-2'>
         <div className='md:justify-start  md:mx-4'>
           <a href='/'>Fundit</a>
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
       </div>
       <svg
-        className='lg:hidden w-16 h-10 text-blue-500 cursor-pointer relative'
+        className='lg:hidden w-16 h-10 text-stone-500 cursor-pointer relative'
         aria-hidden='true'
         fill='currentColor'
         viewBox='0 0 20 20'
