@@ -17,7 +17,7 @@ const About = () => {
               </h5>
             </div>
           </div>
-          <div className='flex xs:hidden justify-center flex-row gap-4'>
+          <div className='md:flex xs:hidden justify-center flex-row gap-4'>
             <div className='rounded-full bg-slate-300 '>
               <button className='text-black-100 rounded-full md:px-4  md:py-2 xs:px-5 xs:py-2'>
                 1
@@ -29,7 +29,7 @@ const About = () => {
               </h5>
             </div>
           </div>
-          <div className='flex xs:hidden justify-center flex-row gap-4'>
+          <div className='md:flex xs:hidden justify-center flex-row gap-4'>
             <div className='rounded-full bg-slate-300 '>
               <button className='text-black-100 rounded-full md:px-4  md:py-2 xs:px-5 xs:py-2'>
                 1
