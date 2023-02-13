@@ -18,18 +18,18 @@ const Donate = (props: propsType) => {
       <div className='lg:text-3xl md:text-lg sm:text-lg font-bold text-center'>
         <h1 className=''>Donations</h1>
       </div>
-      <div className='container mx-auto xs:mx-0  lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-4 '>
+      <div className='md:container md:mx-auto xs:mx-2  lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-8 p-2'>
         {new_data.map((data) => {
           return (
             <div className='w-full flex p-3  bg-stone-400 bg-opacity-60 backdrop-filter backdrop-blur-lg gap-2 flex-col  rounded-3xl'>
               <div className='relative shrink-0'>
                 <img
-                  className='w-full h-64 object-cover rounded-3xl'
+                  className='w-full md:h-64 xs:h-24 object-cover rounded-3xl'
                   src={require('../images/heropics.png')}
                   alt='donate'
                 />
                 <img
-                  className='absolute rounded-lg object-cover top-6 left-6 w-16 h-14'
+                  className='absolute rounded-lg object-cover top-6 left-6 md:w-16 xs:w-8 md:h-14 xs:h-7'
                   src={require('../images/538.png')}
                   alt='chain'
                 />
@@ -38,7 +38,7 @@ const Donate = (props: propsType) => {
                 <h5 className='bold'>
                   <strong>Name: </strong> {data.name}
                 </h5>
-                <h5 className='bold'>
+                <h5 className='bold md:text-base xs:text-sm'>
                   <strong>Description: </strong> {data.description}
                 </h5>
                 <div className='flex justify-between items-center p-2'>
