@@ -1,8 +1,43 @@
-.App {
-  text-align: center;
+body {
+  position: relative;
+
+  background: radial-gradient(
+    88.65% 88.65% at 50% 11.35%,
+    #715e5e 0%,
+    rgba(113, 94, 94, 0.26) 100%
+  );
 }
 
-.App-logo {
+
+.hero-pics {
+  border-radius: 60px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+@media (min-width: 640px) { 
+  .hero {
+  border-radius: 76px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+ }
+
+ @media (max-width: 764px) { 
+  .hero {
+  
+  border-radius: 106px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+ }
+
+ @media (max-width: 1024px) { 
+ .hero {
+  border-radius: 167px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+ }
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
