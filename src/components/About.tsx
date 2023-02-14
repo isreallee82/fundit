@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className='flex md::container mx-auto md:flex-row xs:flex-col md:my-24 xs:my-8'>
+    <div className='flex md:container mx-auto md:flex-row xs:flex-col md:my-24 xs:my-8'>
       <div className='md:w-1/2 xs:w-full '>
         <div className='flex md:m-4 xs:m-2 lg:p-2 md:p-1 flex-col md:text-sm lg:gap-12 md:gap-6 xs:gap-4'>
           <div className='flex justify-center flex-row gap-4'>
@@ -18,7 +18,7 @@ const About = () => {
             </div>
           </div>
           <div className='md:flex xs:hidden justify-center flex-row gap-4'>
-            <div className='rounded-full bg-stone-300 '>
+            <div className='rounded-full '>
               <button className='text-black backdrop-blur-sm bg-white/50  rounded-full md:px-4  md:py-2 xs:px-3 xs:py-1'>
                 1
               </button>
@@ -30,7 +30,7 @@ const About = () => {
             </div>
           </div>
           <div className='md:flex xs:hidden justify-center flex-row gap-4'>
-            <div className='rounded-full bg-stone-300 '>
+            <div className='rounded-full'>
               <button className='text-black backdrop-blur-sm bg-white/50  rounded-full md:px-4  md:py-2 xs:px-3 xs:py-1'>
                 1
               </button>
