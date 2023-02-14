@@ -7,7 +7,6 @@ import Testimonials from '../components/Testimonials'
 import Donate from '../components/Donation'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import datau from '../assets/data'
 import data from '../assets/user'
 import Nav from '../components/Nav'
 import OurTeam from '../components/ourteam'
@@ -20,7 +19,6 @@ const Home = () => {
       <About />
       <AboutUs />
       <Testimonials />
-      <OurTeam data={datau}  />
       <Donate datas={data.donations} />
       <Footer />
       <Nav />
