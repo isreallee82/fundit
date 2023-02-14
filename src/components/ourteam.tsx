@@ -3,6 +3,7 @@ import { Users } from '../../type'
 
 type propsType = {
  data: Users[]
+ Users: Users[]
 }
 
 const OurTeam = (props: propsType) => {
