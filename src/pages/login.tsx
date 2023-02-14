@@ -4,10 +4,9 @@ import { Users } from '../../type.d'
 import data from '../assets/user'
 
 // import Cookies from 'js-cookie'
-import axios from 'axios'
-import { randomInt } from 'crypto'
+
 type propsType = {
-  new_data: User[]
+  data: User[]
 }
 
 export interface Data {
