@@ -9,6 +9,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import data from '../assets/data'
 import Nav from '../components/Nav'
+import Teams from '../components/ourteam'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <About />
       <AboutUs />
       <Testimonials />
+<Teams />
       <Donate datas={data.donations} />
       <Footer />
       <Nav />
