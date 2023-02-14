@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className='z-20 sticky flex xs:mx-4 items-center lg:top-0 xs:top-0 md:container md:mx-auto rounded-full flex-row  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-lg xs:gap-0 sm:justify-around xs:justify-between md:p-1 sm:my-4'>
-      <div className='lg:flex md:gap-6 text-white xs:hidden sm:gap-2'>
+      <div className='lg:flex md:gap-6 text-white md:flex xs:hidden sm:gap-2'>
         <ul className='flex items-center gap-2 text-sm font-medium '>
           <li className='flex-1 '>
             <a
