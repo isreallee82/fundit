@@ -20,7 +20,7 @@ const Home = () => {
       <About />
       <AboutUs />
       <Testimonials />
-      <OurTeam data={datau.user}  />
+      <OurTeam data={datau}  />
       <Donate datas={data.donations} />
       <Footer />
       <Nav />
