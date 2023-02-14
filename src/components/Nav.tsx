@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Sidebar from './sidebar'
+import data from '../assets/data'
 
 const Nav = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false)
-
+  // console.log(data.donations.length)
   return (
     <>
       {toggleSidebar && <Sidebar />}
@@ -20,7 +21,7 @@ const Nav = () => {
             </li>
             <li className='flex-1'>
               <a
-                href='/'
+                href='/about'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 About
@@ -28,19 +29,18 @@ const Nav = () => {
             </li>
             <li className='flex-1'>
               <a
-                href='/'
+                href='/contact'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Contact
                 <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-grey hover:text-black '>
-                  {' '}
-                  8{' '}
+                  {data.donations.length}
                 </span>
               </a>
             </li>
             <li className='flex-1'>
               <a
-                href='/'
+                href='/fundings'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Fundings

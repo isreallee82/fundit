@@ -26,7 +26,6 @@ export interface User {
 }
 
 function Login() {
- 
   const [userData, setUserData] = useState<{ email: string; password: string }>(
     { email: '', password: '' }
   )
@@ -34,18 +33,6 @@ function Login() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-  }
-
-  const Loggedin = () => {
-    const email = data.users.map((datas) => datas.email[0])
-    const password = data.users.map((datas) => datas.password[0])
-    
-    console.log(email)
-    if (
-      userData.email === email[0] &&
-      userData.password === password[0]
-    )
-      return true
   }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -121,8 +108,7 @@ function Login() {
                 </button>
                 {isLogin ? (
                   <p>
-                    Don&apos;t have an account?{' '}
-                    <a href='/register'>Sign Up</a>
+                    Don&apos;t have an account? <a href='/register'>Sign Up</a>
                   </p>
                 ) : (
                   <p>

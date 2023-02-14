@@ -21,7 +21,7 @@ export default function App() {
         <Route path='/user' element={<User />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
-        <Route path='/donate' element={<Donation />} />
+        <Route path='/fundings' element={<Donation />} />
         <Route path='*' element={<h1>Page not Found!</h1>} />
       </Routes>
     </Router>
