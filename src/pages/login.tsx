@@ -1,13 +1,8 @@
-import React, { createContext, useEffect } from 'react'
-import { useState } from 'react'
-import { Users } from '../../type.d'
-import data from '../assets/user'
 
+import { useState } from 'react'
 // import Cookies from 'js-cookie'
 
-type propsType = {
-  data: User[]
-}
+
 
 export interface Data {
   access_token: string
