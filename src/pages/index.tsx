@@ -7,7 +7,7 @@ import Testimonials from '../components/Testimonials'
 import Donate from '../components/Donation'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import data from '../assets/user'
+import data from '../assets/data'
 import Nav from '../components/Nav'
 import OurTeam from '../components/ourteam'
 
