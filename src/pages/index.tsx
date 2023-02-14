@@ -1,4 +1,4 @@
-import React from 'react'
+// import React, { useState, useImperativeHandle } from 'react'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 import data from '../assets/data'
 import Nav from '../components/Nav'
 
-const Home = () => {
+function Home() {
   return (
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />

@@ -10,20 +10,20 @@ const {data} = props
 const new_data = data.map ((data) => data)
   return (
     <div className='bg-stone-200 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
-      <div className='flex flex-col gap-8 justify-left text-stone-700 m-4 md:p-4'>
-        <h1 className='m-4 p-4 font-extrabold text-4xl'>Our Team</h1>
+      <div className='flex flex-col gap-8 justify-left text-stone-700 mx-8 mb-8 md:p-4'>
+        <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
         <h5>
           we're a dynamic group of individuals who are passionate about what we
           do and dedicated to delivering the best results for our clients.
         </h5>
       </div>
-      <div className='grid justify-center md:m-2 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-1 lg:gap-8 md:gap-6 xs:gap-6'>
+      <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-12 md:gap-8 xs:gap-6'>
         {new_data.map((data) => {
           return (
             <div className='flex md:flex-col xs:flex-col text-center '>
               <div className='shrink-0 mb-4'>
                 <img
-                  className='rounded-2xl object-cover w-full h-72'
+                  className='rounded-2xl object-cover w-full md:h-72 xs:h-48'
                   src={require('../images/hero.png')}
                   alt='manager'
                 />
