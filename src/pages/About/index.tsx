@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import OurTeam from '../../components/ourteam'
-import Nav from '../../components/nav'
+import Nav from '../../components/Nav'
 import data from '../../assets/user'
 
 const About = () => {
