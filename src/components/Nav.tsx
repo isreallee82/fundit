@@ -38,7 +38,7 @@ const Nav = () => {
           </li>
           <li className='flex-1'>
             <a
-              href='/funding'
+              href='/donate'
               className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
             >
               Fundings
