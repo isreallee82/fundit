@@ -8,6 +8,7 @@ import Donation from './pages/Donation'
 import Contact from './pages/contact'
 import User from './pages/Dashboard/user'
 import Admin from './pages/Dashboard/admin'
+import Team from './pages/Dashboard/ourteam'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/user' element={<User />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
+        <Route path='/team' element={<Team />} />
         <Route path='/donate' element={<Donation />} />
         <Route path='*' element={<h1>Page not Found!</h1>} />
       </Routes>
