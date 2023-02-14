@@ -9,7 +9,6 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import data from '../assets/data'
 import Nav from '../components/Nav'
-import OurTeam from '../components/ourteam'
 
 const Home = () => {
   return (
