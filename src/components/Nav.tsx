@@ -18,7 +18,7 @@ const Nav = () => {
           </li>
           <li className='flex-1'>
             <a
-              href='/'
+              href='/about'
               className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
             >
               About
@@ -26,7 +26,7 @@ const Nav = () => {
           </li>
           <li className='flex-1'>
             <a
-              href='/'
+              href='/contact'
               className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-black hover:shadow'
             >
               Contact
@@ -38,7 +38,7 @@ const Nav = () => {
           </li>
           <li className='flex-1'>
             <a
-              href='/'
+              href='/funding'
               className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
             >
               Fundings
