@@ -2,8 +2,6 @@
 import { useState } from 'react'
 // import Cookies from 'js-cookie'
 
-
-
 export interface Data {
   access_token: string
   token_type: string
