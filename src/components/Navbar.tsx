@@ -177,7 +177,7 @@ const togglePopup = () => {
                 <a href='/contact'>Profile</a>
               </li>
               <li className='px-4 text-base py-2'>
-                <button onClick={setIsConnected(!isConnected)} type='submit'>Sign Out</button>
+                <button onClick={() => setIsConnected(!isConnected)} type='submit'>Sign Out</button>
               </li>
             </ul>
           )}
