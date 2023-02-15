@@ -1,37 +1,33 @@
 import React from 'react'
-import Popup from './popup'
-import {useState} from 'react'
+import '../style.css'
 
-const Wallet = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen)
-  }
- return <div>
-   {isOpen && (
-     <Popup
-       content={
-         <>
-           <div className='p-4'>
-             <b>Design your Popup</b>
-             <p className='m-2'>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
-             </p>
-             <button>Test button</button>
-           </div>
-         </>
-       }
-       handleClose={togglePopup}
-     />
-   )}
- </div>
+const walletPop = (props: any) => {
+  return (
+    <div className='xs:fixed md:w-2/5 md:top-28 z-40 xs:bottom-14 md:right-0 md:right-36 p-4 sm:w-4/5 xs:w-full md:h-2/5 rounded-3xl bg-stone-100 bg-opacity-60 backdrop-filter backdrop-blur-lg '>
+      <div className='bg-stone-300 rounded-3xl p-4 w-full h-full'>
+        <span
+          className='fixed pointer right-4 px-2 mr-3 text-xs font-medium text-stone-800 bg-stone-200 rounded-full dark:bg-stone-900 dark:text-stone-300'
+          onClick={props.handleClose}
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='w-5 h-8'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              d='M6 18L18 6M6 6l12 12'
+            />
+          </svg>
+        </span>
+        {props.content}
+      </div>
+    </div>
+  )
 }
 
-export default Wallet
+export default walletPop

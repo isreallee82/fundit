@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Popup from './popup'
+import Wallet from './Wpopup'
 
 
 const Hero = () => {
@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
       </div>
       {isOpen && (
-        <Popup
+        <Wallet
           content={
             <>
               <div className='p-4'>

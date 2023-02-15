@@ -9,14 +9,12 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import data from '../assets/data'
 import Nav from '../components/Nav'
-import Wallet from '../components/Wpopup'
 
 function Home() {
   return (
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
       <Hero />
-      <Wallet  />
       <About />
       <AboutUs />
       <Testimonials />
