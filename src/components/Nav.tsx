@@ -30,7 +30,7 @@ const Nav = () => {
             <li className='flex-1'>
               <a
                 href='/contact'
-                className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
+                className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-black hover:shadow'
               >
                 Contact
                 <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-grey hover:text-black '>
