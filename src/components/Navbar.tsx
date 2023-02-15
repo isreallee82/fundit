@@ -1,11 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
 import Sidebar from '../components/sidebar'
+import Popup from './popup'
 
 const Navbar = () => {
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [isConnected, setIsConnected] = useState(false)
 
+
+const togglePopup = () => {
+  setIsOpen(!isOpen)
+}
+  
 
   return (
     <>
@@ -147,12 +155,22 @@ const Navbar = () => {
         </div>
 
         <div className='xs:justify-end'>
-          <img
-            onClick={() => setHandleChange(!HandleChange)}
-            className=' h-12 w-12 object-cover rounded-full'
-            src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
-            alt='Current-profile'
-          />
+          {!isConnected ? (
+            <button
+              className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
+              onClick={togglePopup}
+              type='submit'
+            >
+              Connect
+            </button>
+          ) : (
+            <img
+              onClick={() => setHandleChange(!HandleChange)}
+              className=' h-12 w-12 object-cover rounded-full'
+              src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+              alt='Current-profile'
+            />
+          )}
           {HandleChange && (
             <ul className='absolute z-40 mt-2 bg-white rounded-lg shadow-xl py-2'>
               <li className='px-4 text-base py-2'>
@@ -165,6 +183,24 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      {isOpen && (
+        <Popup
+          content={
+            <>
+              <div className='p-4 flex bg-stone-300 flex-col gap-2'>
+                <b>Connect your wallet</b>
+                <button
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
+                  type='submit'
+                >
+                  Connect
+                </button>
+              </div>
+            </>
+          }
+          handleClose={togglePopup}
+        />
+      )}
     </>
   )
 }

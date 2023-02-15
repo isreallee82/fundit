@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Popup from './popup'
-import '../../src/style.css'
+
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false)
