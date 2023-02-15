@@ -10,9 +10,9 @@ const Sidebar = () => {
           className='fixed top-0 left-0 rounded-full z-30 w-64 h-full transition-transform -translate-x-full xs:translate-x-0 duration-300 delay-700'
           aria-label='Sidebar'
         >
-          <div className='h-full px-3 py-4 overflow-y-auto bg-stone-100 dark:bg-stone-700 bg-opacity-10 backdrop-filter backdrop-blur-2xl'>
+          <div className='h-full px-3 py-4 overflow-y-auto bg-stone-200 dark:bg-stone-700 bg-opacity-10 backdrop-filter backdrop-blur-2xl'>
             <span
-              className='inline-flex items-center justify-end px-2 ml-3 text-xs font-medium text-stone-800 bg-stone-200 rounded-full dark:bg-stone-900 dark:text-stone-300'
+              className='inline-flex items-center justify-end px-2 ml-3 text-xs font-medium text-stone-800 bg-white rounded-full dark:bg-stone-900 dark:text-stone-300'
               onClick={() => setToggleSidebar(!toggleSidebar)}
             >
               <svg
