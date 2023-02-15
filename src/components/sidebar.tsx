@@ -7,7 +7,7 @@ const Sidebar = () => {
     <>
       {!toggleSidebar && (
         <aside
-          className='fixed top-0 left-0 z-40 w-64 h-5/6 transition-transform -translate-x-full xs:translate-x-0'
+          className='fixed top-1 left-2 rounded-lg z-40 w-64 h-5/6 transition-transform -translate-x-full xs:translate-x-0'
           aria-label='Sidebar'
         >
           <div className='h-full px-3 py-4 overflow-y-auto bg-stone-100 dark:bg-stone-700 bg-opacity-10 backdrop-filter backdrop-blur-2xl'>
