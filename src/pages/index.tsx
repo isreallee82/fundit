@@ -15,6 +15,7 @@ function Home() {
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
       <Hero />
+      
       <About />
       <AboutUs />
       <Testimonials />

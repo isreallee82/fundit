@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       {toggleSidebar && <Sidebar />}
       <div className='z-20 sticky flex xs:mx-4 items-center lg:top-0 xs:top-0 md:container md:mx-auto sm:mx-auto sm:pl-4 rounded-full flex-row  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-lg xs:gap-0 md:justify-around sm:justify-between xs:justify-between md:p-1 sm:my-4'>
-        <div className='flex gap-2 md:hidden items-center mx-4'>
+        <div className='flex gap-2 lg:hidden  items-center mx-4'>
           {' '}
           <svg
             onClick={() => setToggleSidebar(!toggleSidebar)}
@@ -20,7 +20,7 @@ const Navbar = () => {
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='lg:hidden w-6 h-6'
+            className='lg:hidden md:flex sm:flex w-6 h-6'
           >
             <path
               strokeLinecap='round'
@@ -34,7 +34,7 @@ const Navbar = () => {
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='lg:hidden w-16 h-10 text-stone-100 cursor-pointer relative'
+            className='xl:hidden md:flex w-16 h-10 text-stone-100 cursor-pointer relative'
           >
             <path
               strokeLinecap='round'
