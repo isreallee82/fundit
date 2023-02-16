@@ -1,7 +1,13 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
+
+declare global {
+  interface Window {
+    ethereum?: any
+  }
+}
 
 const Navbar = () => {
   const [HandleChange, setHandleChange] = useState(false)
@@ -9,7 +15,24 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
 
+   useEffect(() => {
+     // Check if the user has MetaMask installed and enabled
+     if (typeof window.ethereum !== 'undefined') {
+       console.log('MetaMask is installed!')
+     } else {
+       console.log('MetaMask is not installed!')
+     }
+   }, [])
 
+  const connectToEthereum = async (): Promise<void> => {
+    try {
+      // Request the user's permission to connect to MetaMask
+      await window.ethereum.request({ method: 'eth_requestAccounts' })
+      setIsConnected(true)
+    } catch (error) {
+      console.error(error)
+    }
+  }
 const togglePopup = () => {
   setIsOpen(!isOpen)
 }
@@ -177,7 +200,12 @@ const togglePopup = () => {
                 <a href='/contact'>Profile</a>
               </li>
               <li className='px-4 text-base py-2'>
-                <button onClick={() => setIsConnected(!isConnected)} type='submit'>Sign Out</button>
+                <button
+                  onClick={() => setIsConnected(!isConnected)}
+                  type='submit'
+                >
+                  Sign Out
+                </button>
               </li>
             </ul>
           )}
@@ -192,6 +220,7 @@ const togglePopup = () => {
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
+                  onClick={connectToEthereum}
                 >
                   Connect
                 </button>
