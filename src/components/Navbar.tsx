@@ -15,14 +15,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
 
-   useEffect(() => {
-     // Check if the user has MetaMask installed and enabled
-     if (typeof window.ethereum !== 'undefined') {
-       console.log('MetaMask is installed!')
-     } else {
-       console.log('MetaMask is not installed!')
-     }
-   }, [])
+  useEffect(() => {
+    // Check if the user has MetaMask installed and enabled
+    if (typeof window.ethereum !== 'undefined') {
+      console.log('MetaMask is installed!')
+    } else {
+      console.log('MetaMask is not installed!')
+    }
+  }, [])
 
   const connectToEthereum = async (): Promise<void> => {
     try {
@@ -33,10 +33,9 @@ const Navbar = () => {
       console.error(error)
     }
   }
-const togglePopup = () => {
-  setIsOpen(!isOpen)
-}
-  
+  const togglePopup = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <>
@@ -194,7 +193,7 @@ const togglePopup = () => {
               alt='Current-profile'
             />
           )}
-          {HandleChange && (
+          {(HandleChange && isConnected) && (
             <ul className='absolute z-40 mt-2 bg-white rounded-lg shadow-xl py-2'>
               <li className='px-4 text-base py-2'>
                 <a href='/contact'>Profile</a>
@@ -211,11 +210,11 @@ const togglePopup = () => {
           )}
         </div>
       </div>
-      {isOpen && (
+      {(isOpen && !isConnected) && (
         <Popup
           content={
             <>
-              <div className='p-4 flex bg-stone-300 flex-col gap-2'>
+              <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-full'>
                 <b>Connect your wallet</b>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'

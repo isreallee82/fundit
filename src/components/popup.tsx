@@ -24,7 +24,7 @@ const Popup = (props: any) => {
             />
           </svg>
         </span>
-        {props.content}
+        <div className='flex flex-col gap 2'>{props.content}</div>
       </div>
     </div>
   )
