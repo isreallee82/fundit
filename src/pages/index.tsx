@@ -1,4 +1,4 @@
-// import React, { useState, useImperativeHandle } from 'react'
+import React from 'react'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -12,8 +12,7 @@ import Nav from '../components/Nav'
 
 
 function Home() {
-  return (
-    <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
+  return <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
       <Hero />
       <About />
@@ -23,8 +22,6 @@ function Home() {
       <Footer />
       <Nav />
     </div>
-  )
 }
-
 
 export default Home

@@ -12,11 +12,11 @@ function getLibrary(provider) {
   return new Web3Provider(provider)
 }
 root.render(
-  <Web3ReactProvider getLibrary={getLibrary}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Web3ReactProvider>
+   <Web3ReactProvider getLibrary={getLibrary}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Web3ReactProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function
