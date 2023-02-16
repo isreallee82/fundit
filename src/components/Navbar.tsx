@@ -220,7 +220,7 @@ const togglePopup = () => {
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
-                  onClick={connectToEthereum}
+                  onClick={() => connectToEthereum}
                 >
                   Connect
                 </button>
