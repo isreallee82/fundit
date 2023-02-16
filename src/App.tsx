@@ -9,8 +9,8 @@ import Contact from './pages/contact'
 import User from './pages/Dashboard/user'
 import Admin from './pages/Dashboard/admin'
 
-
 export default function App() {
+
   return (
     <Router>
       <Routes>

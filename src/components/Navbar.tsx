@@ -2,6 +2,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
+import { WalletLinkConnector } from '@web3-react/walletlink-connector'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { InjectedConnector } from '@web3-react/injected-connector'
+import { useWeb3React } from '@web3-react/core'
 
 declare global {
   interface Window {
@@ -10,6 +14,23 @@ declare global {
 }
 
 const Navbar = () => {
+  const CoinbaseWallet = new WalletLinkConnector({
+    url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+    appName: 'Web3-react Demo',
+    supportedChainIds: [1, 3, 4, 5, 42],
+  })
+
+  const WalletConnect = new WalletConnectConnector({
+    rpc: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+    bridge: 'https://bridge.walletconnect.org',
+    qrcode: true,
+  })
+
+  const Injected = new InjectedConnector({
+    supportedChainIds: [1, 3, 4, 5, 42],
+  })
+
+  const { activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +61,7 @@ const Navbar = () => {
   return (
     <>
       {toggleSidebar && <Sidebar />}
-      <div className='z-20 sticky flex xs:mx-4 items-center lg:top-0 xs:top-0 md:container md:mx-auto sm:mx-auto sm:pl-4 rounded-full flex-row  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-lg xs:gap-0 md:justify-around sm:justify-between xs:justify-between md:p-1 sm:my-4'>
+      <div className='z-20 sticky flex xs:mx-4 items-center lg:top-0 xs:top-0 md:container md:mx-auto sm:mx-auto sm:pl-4 rounded-full flex-row  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-lg xs:gap-0 md:justify-around sm:justify-between xs:justify-between  sm:my-4'>
         <div className='flex gap-2 lg:hidden  items-center mx-4'>
           {' '}
           <svg
@@ -193,7 +214,7 @@ const Navbar = () => {
               alt='Current-profile'
             />
           )}
-          {(HandleChange && isConnected) && (
+          {HandleChange && isConnected && (
             <ul className='absolute z-40 mt-2 bg-white rounded-lg shadow-xl py-2'>
               <li className='px-4 text-base py-2'>
                 <a href='/contact'>Profile</a>
@@ -210,12 +231,35 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {(isOpen && !isConnected) && (
+      {isOpen && !isConnected && (
         <Popup
           content={
             <>
-              <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-full'>
+              <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
+                <button
+                  onClick={() => {
+                    activate(CoinbaseWallet)
+                  }}
+                >
+                  Coinbase Wallet
+                </button>
+                <button
+                  onClick={() => {
+                    activate(WalletConnect)
+                  }}
+                >
+                  Wallet Connect
+                </button>
+                <button
+                  onClick={() => {
+                    activate(Injected)
+                  }}
+                >
+                  Metamask
+                </button>
+
+                <button onClick={deactivate}>Disconnect</button>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
