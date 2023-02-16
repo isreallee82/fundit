@@ -259,13 +259,15 @@ const Navbar = () => {
                   Metamask
                 </button>
 
-                <button onClick={deactivate}>Disconnect</button>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
                   onClick={() => connectToEthereum()}
                 >
                   Connect
+                </button>
+                <button type='submit' onClick={deactivate}>
+                  Disconnect
                 </button>
               </div>
             </>

@@ -8,7 +8,6 @@ import { Web3Provider } from "@ethersproject/providers";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 function getLibrary(provider) {
   return new Web3Provider(provider)
 }
