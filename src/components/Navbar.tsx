@@ -2,10 +2,10 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
-import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-import { InjectedConnector } from '@web3-react/injected-connector'
-import { useWeb3React } from '@web3-react/core'
+// import { WalletLinkConnector } from '@web3-react/walletlink-connector'
+// import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+// import { InjectedConnector } from '@web3-react/injected-connector'
+// import { useWeb3React } from '@web3-react/core'
 
 declare global {
   interface Window {
@@ -14,23 +14,23 @@ declare global {
 }
 
 const Navbar = () => {
-  const CoinbaseWallet = new WalletLinkConnector({
-    url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-    appName: 'Web3-react Demo',
-    supportedChainIds: [1, 3, 4, 5, 42],
-  })
+  // const CoinbaseWallet = new WalletLinkConnector({
+  //   url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+  //   appName: 'Web3-react Demo',
+  //   supportedChainIds: [1, 3, 4, 5, 42],
+  // })
 
-  const WalletConnect = new WalletConnectConnector({
-    rpc: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-    bridge: 'https://bridge.walletconnect.org',
-    qrcode: true,
-  })
+  // const WalletConnect = new WalletConnectConnector({
+  //   rpc: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+  //   bridge: 'https://bridge.walletconnect.org',
+  //   qrcode: true,
+  // })
 
-  const Injected = new InjectedConnector({
-    supportedChainIds: [1, 3, 4, 5, 42],
-  })
+  // const Injected = new InjectedConnector({
+  //   supportedChainIds: [1, 3, 4, 5, 42],
+  // })
 
-  const { activate, deactivate } = useWeb3React()
+  // const { activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -237,7 +237,7 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-                <button
+                {/* <button
                   onClick={() => {
                     activate(CoinbaseWallet)
                   }}
@@ -257,7 +257,7 @@ const Navbar = () => {
                   }}
                 >
                   Metamask
-                </button>
+                </button> */}
 
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
@@ -266,9 +266,9 @@ const Navbar = () => {
                 >
                   Connect
                 </button>
-                <button type='submit' onClick={deactivate}>
+                {/* <button type='submit' onClick={deactivate}>
                   Disconnect
-                </button>
+                </button> */}
               </div>
             </>
           }

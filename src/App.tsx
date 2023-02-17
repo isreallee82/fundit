@@ -1,8 +1,8 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Index from './pages'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
 import Donation from './pages/Donation'
 import Contact from './pages/contact'
@@ -10,7 +10,6 @@ import User from './pages/Dashboard/user'
 import Admin from './pages/Dashboard/admin'
 
 export default function App() {
-
   return (
     <Router>
       <Routes>
