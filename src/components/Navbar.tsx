@@ -2,10 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
-// import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-// import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-// import { InjectedConnector } from '@web3-react/injected-connector'
-// import { useWeb3React } from '@web3-react/core'
+import { useWeb3React } from '@web3-react/core'
+import { CoinbaseWallet, Injected } from './conectors'
+
 
 declare global {
   interface Window {
@@ -14,23 +13,7 @@ declare global {
 }
 
 const Navbar = () => {
-  // const CoinbaseWallet = new WalletLinkConnector({
-  //   url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-  //   appName: 'Web3-react Demo',
-  //   supportedChainIds: [1, 3, 4, 5, 42],
-  // })
-
-  // const WalletConnect = new WalletConnectConnector({
-  //   rpc: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-  //   bridge: 'https://bridge.walletconnect.org',
-  //   qrcode: true,
-  // })
-
-  // const Injected = new InjectedConnector({
-  //   supportedChainIds: [1, 3, 4, 5, 42],
-  // })
-
-  // const { activate, deactivate } = useWeb3React()
+   const { activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -130,6 +113,10 @@ const Navbar = () => {
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Fundings
+                <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-black '>
+                  {' '}
+                  8{' '}
+                </span>
               </a>
             </li>
             <li className='flex-1 md:hidden '>
@@ -237,27 +224,27 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-                {/* <button
+                <button
                   onClick={() => {
                     activate(CoinbaseWallet)
                   }}
                 >
                   Coinbase Wallet
                 </button>
-                <button
+                {/* <button
                   onClick={() => {
                     activate(WalletConnect)
                   }}
                 >
                   Wallet Connect
-                </button>
+                </button> */}
                 <button
                   onClick={() => {
                     activate(Injected)
                   }}
                 >
                   Metamask
-                </button> */}
+                </button>
 
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
@@ -266,9 +253,9 @@ const Navbar = () => {
                 >
                   Connect
                 </button>
-                {/* <button type='submit' onClick={deactivate}>
+                <button type='submit' onClick={deactivate}>
                   Disconnect
-                </button> */}
+                </button>
               </div>
             </>
           }

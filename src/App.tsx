@@ -8,21 +8,33 @@ import Donation from './pages/Donation'
 import Contact from './pages/contact'
 import User from './pages/Dashboard/user'
 import Admin from './pages/Dashboard/admin'
+import Login from './pages/login'
+// import {ethers } from 'ethers'
+import { Web3ReactProvider } from '@web3-react/core'
+import { Web3Provider } from '@ethersproject/providers'
+
+function getLibrary(provider: any) {
+   return new Web3Provider(provider);
+ }
 
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Index />} />
-        <Route path='/login' element={<Index />} />
-        <Route path='/register' element={<Index />} />
-        <Route path='/admin' element={<Admin />} />
-        <Route path='/user' element={<User />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/fundings' element={<Donation />} />
-        <Route path='*' element={<h1>Page not Found!</h1>} />
-      </Routes>
-    </Router>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Index />} />
+            <Route path='/login' element={<Index />} />
+            <Route path='/register' element={<Index />} />
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/user' element={<User />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/fundings' element={<Donation />} />
+            <Route path='*' element={<h1>Page not Found!</h1>} />
+          </Routes>
+        </Router>
+      </Web3ReactProvider>
+   
   )
 }

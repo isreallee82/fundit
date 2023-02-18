@@ -9,8 +9,8 @@ const OurTeam = (props: propsType) => {
 const {data} = props
 const new_data = data.map ((data) => data)
   return (
-    <div className='bg-stone-200 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
-      <div className='flex flex-col gap-8 justify-left text-stone-700 mx-8 mb-8 md:p-4'>
+    <div className='bg-stone-200 bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
+      <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
         <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
         <h5>
           we're a dynamic group of individuals who are passionate about what we
@@ -71,7 +71,7 @@ const new_data = data.map ((data) => data)
         })}
       </div>
       <div className='lg:my-24 md:my-12 xs:my-12  mx-auto container w-2/3 text-center'>
-        <h5 className='text-slate-900 lg:text-xl'>
+        <h5 className='lg:text-xl'>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quas
           corporis veniam tempore totam quae aliquid sint tenetur cupiditate
           ipsa! Eligendi cupiditate corrupti asperiores saepe perspiciatis

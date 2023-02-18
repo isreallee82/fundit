@@ -1,6 +1,7 @@
-
 import { useState } from 'react'
 // import Cookies from 'js-cookie'
+import { AppContext } from './index'
+import { useContext } from 'react'
 
 export interface Data {
   access_token: string
@@ -19,10 +20,11 @@ export interface User {
 }
 
 function Login() {
+  const { loggedIn, setLoggedIn } = useContext(AppContext)
   const [userData, setUserData] = useState<{ email: string; password: string }>(
     { email: '', password: '' }
   )
-  const [isLogin, setIsLogin] = useState(true)
+  // const [isLogin, setIsLogin] = useState(true)
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -36,9 +38,9 @@ function Login() {
     }))
   }
 
-  function handleToggle() {
-    setIsLogin((prevState) => !prevState)
-  }
+  // function handleToggle() {
+  //   setIsLogin((prevState) => !prevState)
+  // }
 
   // hook useEffect
   // useEffect(() => {
@@ -89,7 +91,7 @@ function Login() {
                     value={userData.password}
                     onChange={handleChange}
                     placeholder='••••••••'
-                    className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                    className='bg-gray-50 border border-gray-300 text-gray-900 sSm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                   ></input>
                 </div>
 
@@ -99,14 +101,17 @@ function Login() {
                 >
                   Log in
                 </button>
-                {isLogin ? (
+                {!loggedIn ? (
                   <p>
                     Don&apos;t have an account? <a href='/register'>Sign Up</a>
                   </p>
                 ) : (
                   <p>
                     Already have an account?{' '}
-                    <button onClick={handleToggle} type='submit'>
+                    <button
+                      onClick={() => setLoggedIn(!loggedIn)}
+                      type='submit'
+                    >
                       Login
                     </button>
                   </p>

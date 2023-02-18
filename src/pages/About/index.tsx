@@ -5,14 +5,15 @@ import Footer from '../../components/Footer'
 import OurTeam from '../../components/ourteam'
 import Nav from '../../components/Nav'
 import data from '../../assets/user'
+import datas from '../../assets/data'
 
 const About = () => {
   return (
-    <div className='pt-6 md:text-lg sm:text-base'>
-      <Navbar />
-      <OurTeam data={data.users}  />
+    <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
+      <Navbar  />
+      <OurTeam data={data.users} />
       <Footer />
-      <Nav />
+      <Nav data={datas.donations} />
     </div>
   )
 }

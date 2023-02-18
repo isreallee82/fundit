@@ -8,11 +8,11 @@ import data from '../../assets/data'
 
 const Donation = () => {
   return (
-    <div className=' md:text-lg sm:text-base'>
-      <Navbar />
+    <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
+      <Navbar  />
       <Donate datas={data.donations} />
       <Footer />
-      <Nav />
+      <Nav data={data.donations} />
     </div>
   )
 }

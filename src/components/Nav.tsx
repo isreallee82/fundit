@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import Sidebar from './sidebar'
-import data from '../assets/data'
+import { Donation } from '../../type'
 
-const Nav = () => {
+type propsType = {
+  data: Donation[]
+}
+const Nav = (props: propsType) => {
+  const { data } = props
+  const new_data = data.map((data) => data.donations)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   // console.log(data.donations.length)
   return (
     <>
       {toggleSidebar && <Sidebar />}
       <div className='space-y-5 sticky z-40 bottom-0 sm:hidden'>
-        <div className='overflow-hidden rounded-sm border-t border-t-slate-400  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-2xl p-2'>
+        <div className='overflow-hidden rounded-sm border-t border-t-stone-500  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-2xl p-2'>
           <ul className='flex items-center gap-2 text-sm font-medium '>
             <li className='flex-1 '>
               <a
@@ -34,7 +39,7 @@ const Nav = () => {
               >
                 Contact
                 <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-grey hover:text-black '>
-                  {data.donations.length}
+                  {new_data.length}
                 </span>
               </a>
             </li>
@@ -44,6 +49,9 @@ const Nav = () => {
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Fundings
+                <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-black '>
+                 {new_data.length}
+                </span>
               </a>
             </li>
             <li className='flex-1 '>
