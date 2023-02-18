@@ -13,6 +13,7 @@ declare global {
 }
 
 const Navbar = () => {
+  const { active, chainId, account } = useWeb3React()
    const { activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
@@ -214,6 +215,12 @@ const Navbar = () => {
                   Sign Out
                 </button>
               </li>
+              <li>
+                {' '}
+                <div>Connection Status: {active}</div>
+                <div>Account: {account}</div>
+                <div>Network ID: {chainId}</div>
+              </li>
             </ul>
           )}
         </div>
@@ -225,6 +232,8 @@ const Navbar = () => {
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
                 <button
+                  type='submit'
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   onClick={() => {
                     activate(CoinbaseWallet)
                   }}
@@ -232,6 +241,8 @@ const Navbar = () => {
                   Coinbase Wallet
                 </button>
                 <button
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
+                  type='submit'
                   onClick={() => {
                     activate(WalletConnect)
                   }}
@@ -239,6 +250,8 @@ const Navbar = () => {
                   Wallet Connect
                 </button>
                 <button
+                  type='submit'
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   onClick={() => {
                     activate(Injected)
                   }}
@@ -253,7 +266,11 @@ const Navbar = () => {
                 >
                   Connect
                 </button>
-                <button type='submit' onClick={deactivate}>
+                <button
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
+                  type='submit'
+                  onClick={deactivate}
+                >
                   Disconnect
                 </button>
               </div>
