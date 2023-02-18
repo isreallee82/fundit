@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
 import { useWeb3React } from '@web3-react/core'
-import { CoinbaseWallet, Injected } from './conectors'
+import { CoinbaseWallet, Injected, WalletConnect } from './conectors'
 
 
 declare global {
@@ -231,13 +231,13 @@ const Navbar = () => {
                 >
                   Coinbase Wallet
                 </button>
-                {/* <button
+                <button
                   onClick={() => {
                     activate(WalletConnect)
                   }}
                 >
                   Wallet Connect
-                </button> */}
+                </button>
                 <button
                   onClick={() => {
                     activate(Injected)
