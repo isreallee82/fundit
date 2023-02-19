@@ -27,6 +27,7 @@ const Navbar = () => {
       activate(Injected)
       setIsConnected(true)
       setHandleChange(!HandleChange)
+     
     } catch (error) {
       console.error(error)
     }
@@ -37,9 +38,6 @@ const Navbar = () => {
 
   const Disconnected = async (): Promise<void> => {
     try {
-      // Request the user's permission to connect to MetaMask
-      await window.ethereum.request({ method: 'eth_requestAccounts' })
-
       deactivate()
       setHandleChange(!HandleChange)
     } catch (error) {
