@@ -42,7 +42,7 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
-  const address: any = account?.toString()
+  const address: any = account
   return (
     <>
       {toggleSidebar && <Sidebar />}
@@ -199,13 +199,16 @@ const Navbar = () => {
             <img
               onClick={() => setHandleChange(!HandleChange)}
               className=' h-12 w-12 object-cover rounded-full'
-              // src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
-              src={makeBlokie(address)}
+              src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+              // src={makeBlokie(address)}
               alt='Current-profile'
             />
           )}
           {HandleChange && isConnected && (
             <ul className='absolute md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 bg-white rounded-lg shadow-xl px-4 md:text-base xs:text-sm py-2'>
+              <li>Connection Status: {active}</li>
+              <li>Account: {account}</li>
+              <li>Network ID: {chainId}</li>
               <li>
                 <a href='/contact'>Profile</a>
               </li>
@@ -217,9 +220,6 @@ const Navbar = () => {
                   Sign Out
                 </button>
               </li>
-              <li>Connection Status: {active}</li>
-              <li>Account: {account}</li>
-              <li>Network ID: {chainId}</li>
             </ul>
           )}
         </div>
