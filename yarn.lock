@@ -5243,6 +5243,13 @@
   dependencies:
     "fast-safe-stringify" "^2.0.6"
 
+"ethereum-blockies-base64@^1.0.2":
+  "integrity" "sha512-Vg2HTm7slcWNKaRhCUl/L3b4KrB8ohQXdd5Pu3OI897EcR6tVRvUqdTwAyx+dnmoDzj8e2bwBLDQ50ByFmcz6w=="
+  "resolved" "https://registry.npmjs.org/ethereum-blockies-base64/-/ethereum-blockies-base64-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "pnglib" "0.0.1"
+
 "ethereum-blockies@^0.1.1":
   "integrity" "sha512-ED+noMZ6z7RrzzhvrQna1L30C27MX+ZsdB5c/d5vygXtHjEyAQjQS2TgCYhPxs+z3U+u2YQsL9PiRkNl1f+ugg=="
   "resolved" "https://registry.npmjs.org/ethereum-blockies/-/ethereum-blockies-0.1.1.tgz"
@@ -7932,6 +7939,11 @@
   "integrity" "sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w=="
   "resolved" "https://registry.npmjs.org/pngjs/-/pngjs-3.4.0.tgz"
   "version" "3.4.0"
+
+"pnglib@0.0.1":
+  "integrity" "sha512-95ChzOoYLOPIyVmL+Y6X+abKGXUJlvOVLkB1QQkyXl7Uczc6FElUy/x01NS7r2GX6GRezloO/ecCX9h4U9KadA=="
+  "resolved" "https://registry.npmjs.org/pnglib/-/pnglib-0.0.1.tgz"
+  "version" "0.0.1"
 
 "postcss-attribute-case-insensitive@^5.0.2":
   "integrity" "sha512-XIidXV8fDr0kKt28vqki84fRK8VW8eTuIa4PChv2MqKuT6C9UjmSKzen6KaWhWEoYvwxFCa7n/tC1SZ3tyq4SQ=="

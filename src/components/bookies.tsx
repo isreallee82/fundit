@@ -1,5 +1,5 @@
 
-// import {blokies} from 'ethereum-blockies'
+import makeBlokie from 'ethereum-blockies-base64'
 
 
 // const address = [
@@ -29,7 +29,10 @@
 import React from 'react'
 
 const Bookies = ( ) => {
- return <div>bookies</div>
+ const address = '8983njhjcfhuhcuf94989480490498'
+ return <div>
+  <img src={makeBlokie(address)} alt=""/>
+ </div>
 }
 
 export default Bookies
