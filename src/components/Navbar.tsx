@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar'
 import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
-import { CoinbaseWallet, Injected, WalletConnect } from './conectors'
+import { Injected, WalletConnect } from './conectors'
 
 declare global {
   interface Window {
@@ -26,6 +26,7 @@ const Navbar = () => {
       await window.ethereum.request({ method: 'eth_requestAccounts' })
       activate(Injected)
       setIsConnected(true)
+      setHandleChange(!HandleChange)
     } catch (error) {
       console.error(error)
     }
@@ -34,7 +35,20 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
+  const Disconnected = async (): Promise<void> => {
+    try {
+      // Request the user's permission to connect to MetaMask
+      await window.ethereum.request({ method: 'eth_requestAccounts' })
+
+      deactivate()
+      setHandleChange(!HandleChange)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const address: any = account
+  var length = 7
   return (
     <>
       {toggleSidebar && <Sidebar />}
@@ -201,15 +215,44 @@ const Navbar = () => {
             />
           )}
           {HandleChange && isConnected && (
-            <ul className='absolute md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 bg-white rounded-lg shadow-xl px-4 md:text-base xs:text-sm py-2'>
-              <li>Connection Status: {active}</li>
-              <li>Account: {account}</li>
-              <li>Network ID: {chainId}</li>
-              <li>
-                <a href='/contact'>Profile</a>
+            <ul className='absolute bg-stone-300 backdrop-filter backdrop-blur-lg md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 rounded-lg shadow-xl px-4 md:text-base  xs:text-sm py-2'>
+              <li className='m-2'>
+                Status: <strong> {active ? `Active` : `Not Connected`}</strong>
               </li>
-              <li>
+              <li className='m-2'>
+                Account:{' '}
+                <strong> {active ? address.substring(0, length) : ''}</strong>
+              </li>
+              <li className='m-2'>
+                Network ID: <strong>{active ? chainId : ''}</strong>
+              </li>
+              <li className='m-2'>
+                <a className='text-blue-500' href='/contact'>
+                  Profile
+                </a>
+              </li>
+              <li className='m-2'>
+                {active ? (
+                  <button
+                    className='text-blue-500'
+                    type='submit'
+                    onClick={() => Disconnected()}
+                  >
+                    Disconnect
+                  </button>
+                ) : (
+                  <button
+                    className='text-blue-500'
+                    type='submit'
+                    onClick={() => connectToEthereum()}
+                  >
+                    Connect
+                  </button>
+                )}
+              </li>
+              <li className='m-2'>
                 <button
+                  className='text-blue-500'
                   onClick={() => setIsConnected(!isConnected)}
                   type='submit'
                 >
@@ -226,15 +269,7 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-                <button
-                  type='submit'
-                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
-                  onClick={() => {
-                    activate(CoinbaseWallet)
-                  }}
-                >
-                  Coinbase Wallet
-                </button>
+
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
@@ -252,13 +287,6 @@ const Navbar = () => {
                   }}
                 >
                   Metamask
-                </button>
-                <button
-                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
-                  type='submit'
-                  onClick={deactivate}
-                >
-                  Disconnect
                 </button>
               </div>
             </>
