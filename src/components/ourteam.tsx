@@ -9,7 +9,7 @@ const OurTeam = (props: propsType) => {
 const {data} = props
 const new_data = data.map ((data) => data)
   return (
-    <div className='bg-stone-200 bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
+    <div className='bg-stone-400 bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
       <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
         <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
         <h5>
@@ -35,7 +35,7 @@ const new_data = data.map ((data) => data)
               <div className='flex flex-row gap-2'>
                 <a
                   href='https://github.com/isreallee82'
-                  className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
+                  className='text-stone-900 hover:text-gray-900 dark:hover:text-white'
                 >
                   <svg
                     className='w-5 h-5'
@@ -49,7 +49,7 @@ const new_data = data.map ((data) => data)
                 </a>
                 <a
                   href='https://github.com/isreallee82'
-                  className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
+                  className='text-stone-900 hover:text-gray-900 dark:hover:text-white'
                 >
                   <svg
                     className='w-5 h-5'

@@ -11,7 +11,7 @@ type propsType = {
 const Donate = (props: propsType) => {
   const { datas } = props
   const new_data = datas.map((data) => data)
-
+  var length = 32
   return (
     <div className='lg:p-4 grid  justify-center w-full md:p-4 '>
       <div className='lg:text-3xl md:flex justify-center xs:hidden md:text-lg sm:text-lg font-bold text-center'>
@@ -39,6 +39,10 @@ const Donate = (props: propsType) => {
               <div className='flex flex-col gap-4 text-black-400 text-base mt-4 '>
                 <h5 className='m-2'>
                   <strong>Name: </strong> {data.name}
+                </h5>
+                <h5 className='md:block md:hidden sm:hidden md:text-base xs:text-sm'>
+                  <strong>Description: </strong>{' '}
+                  {data.description.substring(0, length) + '...'}
                 </h5>
                 <h5 className='md:block xs:hidden md:text-base xs:text-xs'>
                   <strong>Description: </strong> {data.description}

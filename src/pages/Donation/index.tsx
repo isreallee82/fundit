@@ -9,7 +9,10 @@ import data from '../../assets/data'
 const Donation = () => {
   return (
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
-      <Navbar  />
+      <Navbar />
+      <div className='flex container m-4 md:hidden'>
+        <h1 className='capitalize text-white text-2xl '>Projects</h1>
+      </div>
       <Donate datas={data.donations} />
       <Footer />
       <Nav data={data.donations} />

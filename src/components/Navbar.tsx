@@ -219,7 +219,7 @@ const Navbar = () => {
               </li>
               <li className='m-2'>
                 Account:{' '}
-                <strong> {active ? address.substring(0, length) : ''}</strong>
+                <strong> {active ? address.substring(0, length)+"..." : ''}</strong>
               </li>
               <li className='m-2'>
                 Network ID: <strong>{active ? chainId : ''}</strong>
