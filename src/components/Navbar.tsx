@@ -24,6 +24,7 @@ const Navbar = () => {
     try {
       // Request the user's permission to connect to MetaMask
       await window.ethereum.request({ method: 'eth_requestAccounts' })
+      activate(Injected)
       setIsConnected(true)
     } catch (error) {
       console.error(error)
@@ -194,7 +195,7 @@ const Navbar = () => {
               src={
                 active
                   ? makeBlokie(address)
-                  : ('https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80')
+                  : 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
               }
               alt='Current-profile'
             />
@@ -247,18 +248,10 @@ const Navbar = () => {
                   type='submit'
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   onClick={() => {
-                    activate(Injected)
+                    connectToEthereum()
                   }}
                 >
                   Metamask
-                </button>
-
-                <button
-                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
-                  type='submit'
-                  onClick={() => connectToEthereum()}
-                >
-                  Connect
                 </button>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
