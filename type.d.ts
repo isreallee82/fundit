@@ -4,6 +4,7 @@ export interface Donation {
   description: string
   amount_raised: number
   date: string
+  address: string
   donations?: Donation[]
 }
 
