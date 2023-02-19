@@ -5243,6 +5243,11 @@
   dependencies:
     "fast-safe-stringify" "^2.0.6"
 
+"ethereum-blockies@^0.1.1":
+  "integrity" "sha512-ED+noMZ6z7RrzzhvrQna1L30C27MX+ZsdB5c/d5vygXtHjEyAQjQS2TgCYhPxs+z3U+u2YQsL9PiRkNl1f+ugg=="
+  "resolved" "https://registry.npmjs.org/ethereum-blockies/-/ethereum-blockies-0.1.1.tgz"
+  "version" "0.1.1"
+
 "ethers@^6.0.4":
   "integrity" "sha512-El/9IN2A0ptmxdMQA/Rzn/F80/8OpwHSQ+CkU83y6XIT0fNUz2M2X12VCWzlkmLV0dTGk45gdWR6gxNfyXdylg=="
   "resolved" "https://registry.npmjs.org/ethers/-/ethers-6.0.4.tgz"

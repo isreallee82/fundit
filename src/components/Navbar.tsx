@@ -5,7 +5,6 @@ import Popup from './popup'
 import { useWeb3React } from '@web3-react/core'
 import { CoinbaseWallet, Injected, WalletConnect } from './conectors'
 
-
 declare global {
   interface Window {
     ethereum?: any
@@ -14,7 +13,7 @@ declare global {
 
 const Navbar = () => {
   const { active, chainId, account } = useWeb3React()
-   const { activate, deactivate } = useWeb3React()
+  const { activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -203,11 +202,11 @@ const Navbar = () => {
             />
           )}
           {HandleChange && isConnected && (
-            <ul className='absolute z-40 mt-2 bg-white rounded-lg shadow-xl py-2'>
-              <li className='px-4 text-base py-2'>
+            <ul className='absolute md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 bg-white rounded-lg shadow-xl px-4 md:text-base xs:text-sm py-2'>
+              <li >
                 <a href='/contact'>Profile</a>
               </li>
-              <li className='px-4 text-base py-2'>
+              <li >
                 <button
                   onClick={() => setIsConnected(!isConnected)}
                   type='submit'
@@ -215,12 +214,9 @@ const Navbar = () => {
                   Sign Out
                 </button>
               </li>
-              <li>
-                {' '}
-                <div>Connection Status: {active}</div>
-                <div>Account: {account}</div>
-                <div>Network ID: {chainId}</div>
-              </li>
+              <li>Connection Status: {active}</li>
+              <li>Account: {account}</li>
+              <li>Network ID: {chainId}</li>
             </ul>
           )}
         </div>
