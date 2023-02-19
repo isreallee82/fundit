@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Sidebar from '../components/sidebar'
 import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
@@ -20,15 +20,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
 
-  useEffect(() => {
-    // Check if the user has MetaMask installed and enabled
-    if (typeof window.ethereum !== 'undefined') {
-      console.log('MetaMask is installed!')
-    } else {
-      console.log('MetaMask is not installed!')
-    }
-  }, [])
-
   const connectToEthereum = async (): Promise<void> => {
     try {
       // Request the user's permission to connect to MetaMask
@@ -43,6 +34,7 @@ const Navbar = () => {
   }
 
   const address: any = account
+  console.log(address)
   return (
     <>
       {toggleSidebar && <Sidebar />}
@@ -199,8 +191,8 @@ const Navbar = () => {
             <img
               onClick={() => setHandleChange(!HandleChange)}
               className=' h-12 w-12 object-cover rounded-full'
-              src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
-              // src={makeBlokie(address)}
+              // src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+              src={makeBlokie(address)}
               alt='Current-profile'
             />
           )}

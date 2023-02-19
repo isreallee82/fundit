@@ -19,9 +19,12 @@ const Donate = (props: propsType) => {
         <h1 className='text-stone-300'>Donations</h1>
       </div>
       <div className='md:container md:mx-auto xs:mx-2  lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-8 p-2'>
-        {new_data.map((data) => {
+        { new_data.map((data) => {
           return (
-            <div className='md:w-full md:flex p-3 xs:hidden  bg-stone-300 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col  rounded-3xl'>
+            <div
+              key={data.date}
+              className='md:w-full md:flex p-3 xs:hidden  bg-stone-300 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col  rounded-3xl'
+            >
               <div className='relative shrink-0'>
                 <img
                   className='w-full md:h-64 xs:h-24 object-cover rounded-3xl'
