@@ -8,12 +8,11 @@ export const CoinbaseWallet = new WalletLinkConnector({
   supportedChainIds: [1, 3, 4, 5, 42],
 })
 
-export const walletconnect = new WalletConnectConnector({
-  rpc: { 1: "https://mainnet.infura.io/v3/1c3acca035dd41dfbf400abac71e59a7" },
-  bridge: "https://bridge.walletconnect.org",
-  qrcode: true,
-  pollingInterval: POLLING_INTERVAL
-});
+export const WalletConnect = new WalletConnectConnector({
+   rpc: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+   bridge: 'https://bridge.walletconnect.org',
+   qrcode: true,
+ })
 
 
 export const Injected = new InjectedConnector({
