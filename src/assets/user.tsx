@@ -11,7 +11,8 @@ const data: propsType = {
       UserName: function () {
         return this.fullName + this.id
       },
-      image: 'https//:image.co',
+      image:
+        'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80',
       email: 'user1@gmail.com',
       password: '123456',
       role: 'user',
