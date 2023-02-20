@@ -70,14 +70,6 @@ const new_data = data.map ((data) => data)
           )
         })}
       </div>
-      <div className='lg:my-24 md:my-12 xs:my-12  mx-auto container w-2/3 text-center'>
-        <h5 className='lg:text-xl'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quas
-          corporis veniam tempore totam quae aliquid sint tenetur cupiditate
-          ipsa! Eligendi cupiditate corrupti asperiores saepe perspiciatis
-          laudantium tenetur hic quod.
-        </h5>
-      </div>
     </div>
   )
 }

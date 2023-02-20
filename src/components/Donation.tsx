@@ -38,7 +38,7 @@ const Donate = (props: propsType) => {
               </div>
               <div className='flex flex-col gap-4 text-black-400 text-base mt-4 '>
                 <h5 className='my-2'>
-                  <strong>Name: </strong> {data.name}
+                  <strong>Title: </strong> {data.name}
                 </h5>
                 <h5 className='md:block md:hidden sm:hidden md:text-base xs:text-sm'>
                   <strong>Description: </strong>{' '}

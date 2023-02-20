@@ -44,6 +44,15 @@ const Navbar = () => {
     }
   }
 
+  const Signout = async (): Promise<void> => {
+    try {
+     setIsConnected(!isConnected)
+    setHandleChange(!HandleChange)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   const address: any = account
 
 
@@ -213,7 +222,7 @@ const Navbar = () => {
               alt='Current-profile'
             />
           )}
-          {(HandleChange && isConnected) ? (
+          {(HandleChange) ? (
             <ul className='absolute bg-stone-300 backdrop-filter backdrop-blur-lg md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 rounded-lg shadow-xl px-4 md:text-base  xs:text-sm py-2'>
               <li className='m-2'>
                 Status: <strong> {active ? `Active` : `Not Connected`}</strong>
@@ -252,10 +261,10 @@ const Navbar = () => {
               <li className='m-2'>
                 <button
                   className='text-blue-500'
-                  onClick={() => setIsConnected(!isConnected)}
+                  onClick={() => Signout()}
                   type='submit'
                 >
-                  Sign Out
+                 {isConnected ? "Sign Out" : "Sign in"}
                 </button>
               </li>
             </ul>

@@ -13,8 +13,10 @@ const Investors = (props: propsType) => {
       <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
         <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Investors</h1>
         <h5>
-          we're a dynamic group of individuals who are passionate about what we
-          do and dedicated to delivering the best results for our clients.
+          They may be motivated by financial gain, social impact, or personal
+          interest in the project. Types of investors include individual
+          investors, angel investors, venture capitalists, institutional
+          investors, and socially responsible investors.
         </h5>
       </div>
       <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-8 md:gap-6 xs:gap-4'>
@@ -69,14 +71,6 @@ const Investors = (props: propsType) => {
             </div>
           )
         })}
-      </div>
-      <div className='lg:my-24 md:my-12 xs:my-12  mx-auto container w-2/3 text-center'>
-        <h5 className='lg:text-xl'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quas
-          corporis veniam tempore totam quae aliquid sint tenetur cupiditate
-          ipsa! Eligendi cupiditate corrupti asperiores saepe perspiciatis
-          laudantium tenetur hic quod.
-        </h5>
       </div>
     </div>
   )
