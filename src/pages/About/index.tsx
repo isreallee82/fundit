@@ -10,7 +10,7 @@ import datas from '../../assets/data'
 const About = () => {
   return (
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
-      <Navbar  />
+      <Navbar />
       <OurTeam data={data.users} />
       <Footer />
       <Nav data={datas.donations} />

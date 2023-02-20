@@ -60,7 +60,7 @@ const data: propsType = {
       name: 'April Evelyn',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sunt expedita, repudiandae obcaecati corporis esse architecto, impedit molestias nostrum iure non sapiente officia ad. Repellat numquam iusto optio quam quasi.',
-      amount_raised: 50,
+      amount_raised: 500,
       date: '12-01-2022',
       address: '0x765F8E63CF490144811F215E1E79FF1F5F890820',
       imgUrls:

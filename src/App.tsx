@@ -12,6 +12,7 @@ import Login from './pages/login'
 // import {ethers } from 'ethers'
 import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from '@ethersproject/providers'
+import Investors from './pages/investors'
 
 function getLibrary(provider: any) {
    return new Web3Provider(provider);
@@ -29,6 +30,7 @@ export default function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/user' element={<User />} />
             <Route path='/contact' element={<Contact />} />
+            <Route path='/investors' element={<Investors />} />
             <Route path='/about' element={<About />} />
             <Route path='/fundings' element={<Donation />} />
             <Route path='*' element={<h1>Page not Found!</h1>} />

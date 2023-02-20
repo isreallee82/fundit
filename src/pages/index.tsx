@@ -17,25 +17,26 @@ export const AppContext = createContext({
 })
 
 function Home() {
-  
+ 
+
   const [loggedIn, setLoggedIn] = useState<boolean>(false)
 
   return (
     <AppContext.Provider value={{ loggedIn, setLoggedIn }}>
-      {loggedIn ? (
-        <Login />
-      ) : (
-        <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
-          <Navbar />
-          <Hero />
-          <About />
-          <AboutUs />
-          <Testimonials />
-          <Donate datas={data.donations} />
-          <Footer />
-          <Nav data={data.donations} />
-        </div>
-      )}
+        {loggedIn ? (
+          <Login />
+        ) : (
+          <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
+            <Navbar />
+            <Hero />
+            <About />
+            <AboutUs />
+            <Testimonials />
+            <Donate datas={data.donations} />
+            <Footer />
+            <Nav data={data.donations} />
+          </div>
+        )}
     </AppContext.Provider>
   )
 }

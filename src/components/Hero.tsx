@@ -35,7 +35,8 @@ const Hero = () => {
             </div>
             <div>
               <button className='rounded-lg lg:px-8 lg:py-4  xs:px-6 xs:py-3 ring-2 ring-stone-900 hover:ring-stone-700  bg-stone-900 text-center text-white '>
-                Explore
+                <a href='/fundings'>Explore</a>
+                
               </button>
             </div>
           </div>

@@ -22,4 +22,8 @@ export interface Users {
   address: string
   height: number
   company: string
+  Investors?: Investors
+}
+export interface Investors {
+  Investors?: Users[]
 }

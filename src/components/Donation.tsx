@@ -22,7 +22,7 @@ const Donate = (props: propsType) => {
           return (
             <div
               key={data.address}
-              className='md:w-full md:flex p-3   bg-stone-300 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col  rounded-3xl'
+              className='md:w-full md:flex p-3 ring-2 ring-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col text-stone-300 rounded-3xl'
             >
               <div className='relative shrink-0'>
                 <img
@@ -37,7 +37,7 @@ const Donate = (props: propsType) => {
                 />
               </div>
               <div className='flex flex-col gap-4 text-black-400 text-base mt-4 '>
-                <h5 className='m-2'>
+                <h5 className='my-2'>
                   <strong>Name: </strong> {data.name}
                 </h5>
                 <h5 className='md:block md:hidden sm:hidden md:text-base xs:text-sm'>
@@ -47,9 +47,10 @@ const Donate = (props: propsType) => {
                 <h5 className='md:block xs:hidden md:text-base xs:text-xs'>
                   <strong>Description: </strong> {data.description}
                 </h5>
-                <div className='flex justify-between items-center p-2'>
-                  <h5 className='text-green-800 font-bold md:text-base xs:text-sm '>
-                    <strong>Amount raised:</strong> ${data.amount_raised}
+                <div className='flex justify-between items-center py-2'>
+                  <h5 className='text-green-500 font-bold md:text-base xs:text-sm '>
+                    <strong className='text-stone-300'>Amount raised:</strong> $
+                    {data.amount_raised}
                   </h5>
                   <h5 className='md:text-sm xs:text-xs font-bold'>
                     {data.date}

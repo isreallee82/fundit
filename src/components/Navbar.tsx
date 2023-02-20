@@ -13,8 +13,7 @@ declare global {
 }
 
 const Navbar = () => {
-  const { active, chainId, account } = useWeb3React()
-  const { activate, deactivate } = useWeb3React()
+  const { active, chainId, account, activate, deactivate } = useWeb3React()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -103,10 +102,10 @@ const Navbar = () => {
             </li>
             <li className='flex-1'>
               <a
-                href='/contact'
+                href='/investors'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
-                Contact
+                Investors
                 <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-black '>
                   {' '}
                   8{' '}

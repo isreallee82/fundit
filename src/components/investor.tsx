@@ -2,16 +2,16 @@ import React from 'react'
 import { Users } from '../../type'
 
 type propsType = {
- data: Users[]
+  data: Users[]
 }
 
-const OurTeam = (props: propsType) => {
-const {data} = props
-const new_data = data.map ((data) => data)
+const Investors = (props: propsType) => {
+  const { data } = props
+  const new_data = data.map((data) => data)
   return (
     <div className='bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-6 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-stone-200 text-center'>
       <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
-        <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
+        <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Investors</h1>
         <h5>
           we're a dynamic group of individuals who are passionate about what we
           do and dedicated to delivering the best results for our clients.
@@ -23,13 +23,13 @@ const new_data = data.map ((data) => data)
             <div className='flex md:flex-col ring-stone-600 ring-2 md:p-8 xs:p-4 rounded-3xl xs:flex-col text-center '>
               <div className='shrink-0 mb-4'>
                 <img
-                  className='rounded-2xl object-cover w-full md:h-64 xs:h-32'
+                  className='rounded-2xl object-top object-cover w-full md:h-64 xs:h-32'
                   src={data.image}
                   alt='manager'
                 />
               </div>
               <div className='flex flex-col items-start gap-4'>
-                <h5 className='font-bold text-2xl'>{data.UserName}</h5>
+                <h5 className='font-bold text-base'>{data.UserName}</h5>
                 <h5 className='md:text-lg xs:text-sm'>{data.company} </h5>
               </div>
               <div className='flex flex-row gap-2 my-2'>
@@ -82,4 +82,4 @@ const new_data = data.map ((data) => data)
   )
 }
 
-export default OurTeam
+export default Investors
