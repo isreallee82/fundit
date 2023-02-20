@@ -14,10 +14,10 @@ const Donate = (props: propsType) => {
   var length = 32
   return (
     <div className='lg:p-4 grid  justify-center w-full md:p-4 '>
-      <div className='lg:text-3xl md:flex justify-center xs:hidden md:text-lg sm:text-lg font-bold text-center'>
+      <div className='lg:text-3xl md:flex justify-center xs:hidden md:text-lg sm:text-lg mt-6 font-bold text-center'>
         <h1 className='text-stone-300'>Donations</h1>
       </div>
-      <div className='md:container md:mx-auto xs:mx-2  lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-8 p-2'>
+      <div className='md:container md:mx-auto xs:mx-2  lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-2 p-2'>
         {new_data.slice(0, 6).map((data) => {
           return (
             <div
@@ -26,12 +26,12 @@ const Donate = (props: propsType) => {
             >
               <div className='relative shrink-0'>
                 <img
-                  className='w-full md:h-64 xs:h-24 object-cover rounded-3xl'
-                  src={require('../images/heropics.png')}
+                  className='w-full md:h-64 xs:h-24 object-cover hover:blur-0 brightness-50 rounded-3xl'
+                  src={data.imgUrls}
                   alt='donate'
                 />
                 <img
-                  className='absolute rounded-lg object-cover top-6 left-6 md:w-16 xs:w-8 md:h-14 xs:h-7'
+                  className='absolute rounded-lg object-cover top-4 left-4 md:w-16 xs:w-8 md:h-14 xs:h-7'
                   src={makeBlokie(data.address)}
                   alt='chain'
                 />

@@ -5,6 +5,7 @@ export interface Donation {
   amount_raised: number
   date: string
   address: string
+  imgUrls: string
   donations?: Donation[]
 }
 

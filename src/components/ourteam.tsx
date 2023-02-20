@@ -9,7 +9,7 @@ const OurTeam = (props: propsType) => {
 const {data} = props
 const new_data = data.map ((data) => data)
   return (
-    <div className='bg-stone-400 bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-center'>
+    <div className='bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-stone-200 text-center'>
       <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
         <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
         <h5>
@@ -20,7 +20,7 @@ const new_data = data.map ((data) => data)
       <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-12 md:gap-8 xs:gap-6'>
         {new_data.map((data) => {
           return (
-            <div className='flex md:flex-col xs:flex-col text-center '>
+            <div className='flex md:flex-col ring-2 p-4 rounded-3xl xs:flex-col text-center '>
               <div className='shrink-0 mb-4'>
                 <img
                   className='rounded-2xl object-cover w-full md:h-72 xs:h-48'
@@ -35,7 +35,7 @@ const new_data = data.map ((data) => data)
               <div className='flex flex-row gap-2'>
                 <a
                   href='https://github.com/isreallee82'
-                  className='text-stone-900 hover:text-gray-900 dark:hover:text-white'
+                  className='text-stone-400 hover:text-gray-900 dark:hover:text-white'
                 >
                   <svg
                     className='w-5 h-5'
@@ -49,7 +49,7 @@ const new_data = data.map ((data) => data)
                 </a>
                 <a
                   href='https://github.com/isreallee82'
-                  className='text-stone-900 hover:text-gray-900 dark:hover:text-white'
+                  className='text-stone-400 hover:text-gray-900 dark:hover:text-white'
                 >
                   <svg
                     className='w-5 h-5'

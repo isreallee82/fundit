@@ -10,7 +10,7 @@ const Donation = () => {
   return (
     <div className='pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
-      <div className='flex container m-4 md:hidden'>
+      <div className='flex container mt-6 md:hidden mx-4'>
         <h1 className='capitalize text-white text-2xl '>Projects</h1>
       </div>
       <Donate datas={data.donations} />

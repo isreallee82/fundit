@@ -15,7 +15,7 @@ const Hero = () => {
           <div className='lg:w-3/4 shrink-0 lg:h-full md:justify-center'>
             <img
               className='hero-pics lg:hidden object-cover object-center xs:w-full xs:h-64 rounded-3xl'
-              src={require('../images/heropics.png')}
+              src='https://images.unsplash.com/photo-1486887396153-fa416526c108?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
               alt='hero-pics'
             />
           </div>
@@ -44,7 +44,7 @@ const Hero = () => {
           <div className='lg:w-3/4 shrink-0 lg:h-full md:justify-center'>
             <img
               className='hero-pics lg:w-full object-cover object-center md:w-full lg:h-full rounded-3xl'
-              src={require('../images/heropics.png')}
+              src='https://images.unsplash.com/photo-1486887396153-fa416526c108?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
               alt='hero-pics'
             />
           </div>
