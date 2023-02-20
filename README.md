@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+##  Crowdfunding Web3 Webpage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React web application for a crowdfunding platform that uses web3 technology and Ethereum blockchain to facilitate donations and provide non-fungible tokens (NFTs) to donors. The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.
 
-## Available Scripts
+##  Features
 
-In the project directory, you can run:
+Users can make donations using Ethereum.
+Donors receive a free NFT in return for their donation.
+The platform ensures the transparency and security of donations by leveraging blockchain technology.
+The application is built using React, Web3.js, and Ethereum blockchain.
+Getting Started
 
-### `npm start`
+##  To get started with the application, you can follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone the repository or download the source code.
+Install the required dependencies using npm install.
+Run the application using npm start.
+Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once the application is running, you can access the crowdfunding platform in your web browser by navigating to http://localhost:3000. You can make donations using Ethereum and receive NFTs in return. The platform provides real-time updates on the status of donations and ensures the transparency and security of the transactions.
 
-### `npm test`
+##  Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Contributions are welcome! If you find any bugs or have suggestions for new features, please open an issue or submit a pull request.
 
-### `npm run build`
+##  License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you have any questions or concerns, please contact us at [isreallee82@gmail.com].
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Website: [https://funditt.netlify.com]

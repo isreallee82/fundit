@@ -9,7 +9,7 @@ const OurTeam = (props: propsType) => {
 const {data} = props
 const new_data = data.map ((data) => data)
   return (
-    <div className='bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-14 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-stone-200 text-center'>
+    <div className='bg-opacity-60 backdrop-filter backdrop-blur-lg  m-4 flex justify-center md:container md:mx-auto lg:my-24 md:my-12 xs:my-6 md:flex-col sm:flex-col xs:flex-col rounded-xl text-base text-stone-200 text-center'>
       <div className='flex flex-col gap-8 justify-left  mx-8 mb-8 md:p-4'>
         <h1 className='m-4 p-4 font-extrabold text-4xl mb-4'>Our Team</h1>
         <h5>
@@ -17,7 +17,7 @@ const new_data = data.map ((data) => data)
           do and dedicated to delivering the best results for our clients.
         </h5>
       </div>
-      <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-8 md:gap-6 xs:gap-4'>
+      <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-2 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-8 md:gap-6 xs:gap-4'>
         {new_data.map((data) => {
           return (
             <div className='flex md:flex-col ring-stone-600 ring-2 md:p-8 xs:p-4 rounded-3xl xs:flex-col text-center '>
@@ -30,7 +30,7 @@ const new_data = data.map ((data) => data)
               </div>
               <div className='flex flex-col items-start gap-4'>
                 <h5 className='font-bold text-2xl'>leedox</h5>
-                <h5 className='text-lg'>Front-end Developer</h5>
+                <h5 className='md:text-lg xs:text-sm'>Front-end Developer</h5>
               </div>
               <div className='flex flex-row gap-2'>
                 <a
