@@ -15,28 +15,27 @@ import { Web3Provider } from '@ethersproject/providers'
 import Investors from './pages/investors'
 
 function getLibrary(provider: any) {
-   return new Web3Provider(provider);
- }
+  return new Web3Provider(provider)
+}
 
 export default function App() {
   return (
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Index />} />
-            <Route path='/login' element={<Index />} />
-            <Route path='/register' element={<Index />} />
-            <Route path='/admin' element={<Admin />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/user' element={<User />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/investors' element={<Investors />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/fundings' element={<Donation />} />
-            <Route path='*' element={<h1>Page not Found!</h1>} />
-          </Routes>
-        </Router>
-      </Web3ReactProvider>
-   
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Index />} />
+          <Route path='/login' element={<Index />} />
+          <Route path='/register' element={<Index />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/user' element={<User />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/investors' element={<Investors />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/fundings' element={<Donation />} />
+          <Route path='*' element={<h1>Page not Found!</h1>} />
+        </Routes>
+      </Router>
+    </Web3ReactProvider>
   )
 }

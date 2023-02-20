@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Wallet from './Wpopup'
 
-
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -27,6 +26,7 @@ const Hero = () => {
           <div className='flex gap-8 justify-center lg:flex-row md:flex-row m-2 md:p-2 lg:text-lg md:text-base xs:mb-4 '>
             <div className='flex pt-2 pb-6'>
               <button
+                type='submit'
                 className='rounded-3xl  hover:bg-stone-600 xs:px-3 xs:py-1  lg:py-1 ring-2 ring-stone-600 hover:ring-stone-500 p-2 bg-stone-600 text-white text-center '
                 onClick={togglePopup}
               >
@@ -34,9 +34,11 @@ const Hero = () => {
               </button>
             </div>
             <div>
-              <button className='rounded-lg lg:px-8 lg:py-4  xs:px-6 xs:py-3 ring-2 ring-stone-900 hover:ring-stone-700  bg-stone-900 text-center text-white '>
+              <button
+                type='submit'
+                className='rounded-lg lg:px-8 lg:py-4  xs:px-6 xs:py-3 ring-2 ring-stone-900 hover:ring-stone-700  bg-stone-900 text-center text-white '
+              >
                 <a href='/fundings'>Explore</a>
-                
               </button>
             </div>
           </div>

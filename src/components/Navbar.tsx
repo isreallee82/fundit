@@ -45,6 +45,8 @@ const Navbar = () => {
   }
 
   const address: any = account
+
+
   var length = 7
   return (
     <>
@@ -190,7 +192,7 @@ const Navbar = () => {
         </div>
 
         <div className='xs:justify-end'>
-          {!isConnected ? (
+          {(!active && !isConnected) ? (
             <button
               className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
               onClick={togglePopup}
@@ -211,7 +213,7 @@ const Navbar = () => {
               alt='Current-profile'
             />
           )}
-          {HandleChange && isConnected && (
+          {(HandleChange && isConnected) ? (
             <ul className='absolute bg-stone-300 backdrop-filter backdrop-blur-lg md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 rounded-lg shadow-xl px-4 md:text-base  xs:text-sm py-2'>
               <li className='m-2'>
                 Status: <strong> {active ? `Active` : `Not Connected`}</strong>
@@ -257,7 +259,7 @@ const Navbar = () => {
                 </button>
               </li>
             </ul>
-          )}
+          ): ''}
         </div>
       </div>
       {isOpen && !isConnected && (
