@@ -30,7 +30,7 @@ const new_data = data.map ((data) => data)
               </div>
               <div className='flex flex-col items-start gap-4'>
                 <h5 className='font-bold text-2xl'>leedox</h5>
-                <h5 className='text-lg'>Front-end Developer</h5>
+                <h5 className='md:text-lg xs:text-sm'>Front-end Developer</h5>
               </div>
               <div className='flex flex-row gap-2'>
                 <a
