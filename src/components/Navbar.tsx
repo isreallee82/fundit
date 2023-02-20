@@ -14,6 +14,7 @@ declare global {
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
+  
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -55,6 +56,23 @@ const Navbar = () => {
 
   const address: any = account
 
+  const chainid = () => {
+    if (chainId === 1) {
+      return 'Ethereum Main Network'
+    } else if (chainId === 5001) {
+      return 'Mantle testnet'
+    } else if (chainId === 4) {
+      return 'Rinkeby Testnet'
+    } else if (chainId === 5) {
+      return 'Goerli Testnet'
+    } else if (chainId === 3) {
+      return 'Ropsten testnet'
+    } else if (chainId === 42) {
+      return 'kovan testnet'
+    } else {
+      return 'others'
+    }
+  }
 
   var length = 7
   return (
@@ -232,7 +250,7 @@ const Navbar = () => {
                 <strong> {active ? address.substring(0, length)+"..." : ''}</strong>
               </li>
               <li className='m-2'>
-                Network ID: <strong>{active ? chainId : ''}</strong>
+                Network ID: <strong>{active ? chainid() : ''}</strong>
               </li>
               <li className='m-2'>
                 <a className='text-blue-500' href='/contact'>
