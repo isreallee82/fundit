@@ -17,13 +17,13 @@ const new_data = data.map ((data) => data)
           do and dedicated to delivering the best results for our clients.
         </h5>
       </div>
-      <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-12 md:gap-8 xs:gap-6'>
+      <div className='grid justify-center md:m-4 lg:grid-cols-3 lg:px-24 md:px-12 sm:px-6 xs:px-4 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2 lg:gap-8 md:gap-6 xs:gap-4'>
         {new_data.map((data) => {
           return (
-            <div className='flex md:flex-col ring-2 p-4 rounded-3xl xs:flex-col text-center '>
+            <div className='flex md:flex-col ring-stone-600 ring-2 md:p-8 xs:p-4 rounded-3xl xs:flex-col text-center '>
               <div className='shrink-0 mb-4'>
                 <img
-                  className='rounded-2xl object-cover w-full md:h-72 xs:h-48'
+                  className='rounded-2xl object-cover w-full md:h-64 xs:h-32'
                   src={require('../images/hero.png')}
                   alt='manager'
                 />
