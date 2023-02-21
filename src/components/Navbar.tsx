@@ -250,7 +250,7 @@ const Navbar = () => {
                 <strong> {active ? address.substring(0, length)+"..." : ''}</strong>
               </li>
               <li className='m-2'>
-                Network ID: <strong>{active ? chainid() : ''}</strong>
+                Network: <strong>{active ? chainid() : ''}</strong>
               </li>
               <li className='m-2'>
                 <a className='text-blue-500' href='/contact'>
