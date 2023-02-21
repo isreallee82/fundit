@@ -31,7 +31,7 @@ const Investors = (props: propsType) => {
                 />
               </div>
               <div className='flex flex-col items-start gap-4'>
-                <h5 className='font-bold text-base'>{data.UserName}</h5>
+                <h5 className='font-bold md:text-base xs:text-md'>{data.UserName}</h5>
                 <h5 className='md:text-lg xs:text-sm'>{data.company} </h5>
               </div>
               <div className='flex flex-row gap-2 my-2'>
