@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Wallet from './Wpopup'
-// import { CoinbaseWallet } from './conectors'
-// import { useWeb3React } from '@web3-react/core'
+import { connectors } from './conectors'
+import { useWeb3React } from '@web3-react/core'
 
 const Hero = () => {
-  // const { activate } = useWeb3React()
+  const { activate } = useWeb3React()
   const [isOpen, setIsOpen] = useState(false)
 
   const togglePopup = () => {
@@ -63,16 +63,13 @@ const Hero = () => {
               <div className='p-4 '>
                 <b>Connect your Account</b>
                 <p className='m-2'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Please connect your wallct in other to make a donation on this page
                 </p>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
-                  // onClick={() => {
-                  //   activate(CoinbaseWallet)
-                  // }}
+                  onClick={() => {
+                    activate(connectors.Injected)
+                  }}
                 >
                   Coinbase Wallet
                 </button>
