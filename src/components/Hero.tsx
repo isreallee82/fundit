@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
           <div className='lg:ml-4 container lg:my-12 md:my-12 sm:my-12 mx-auto m-2 p-2'>
             <h1 className='xl:text-7xl lg:text-6xl md:text-2xl sm:text-2xl bold text-center'>
-              The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.
+              .The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.
             </h1>
           </div>
           <div className='flex gap-8 justify-center lg:flex-row md:flex-row m-2 md:p-2 lg:text-lg md:text-base xs:mb-4 '>
