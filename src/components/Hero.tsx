@@ -66,8 +66,7 @@ const Hero = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum.
+                  laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
