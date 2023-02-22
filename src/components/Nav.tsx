@@ -13,7 +13,7 @@ const Nav = (props: propsType) => {
   return (
     <>
       {toggleSidebar && <Sidebar />}
-      <div className='space-y-5 sticky z-40 bottom-0 sm:hidden'>
+      <div className='space-y-5 sticky z-30 bottom-0 sm:hidden'>
         <div className='overflow-hidden rounded-sm border-t border-t-stone-500  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-2xl p-2'>
           <ul className='flex items-center gap-2 text-sm font-medium '>
             <li className='flex-1 '>

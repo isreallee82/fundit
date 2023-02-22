@@ -1,7 +1,5 @@
 import { useState } from 'react'
 // import Cookies from 'js-cookie'
-import { AppContext } from './index'
-import { useContext } from 'react'
 
 export interface Data {
   access_token: string
@@ -20,11 +18,10 @@ export interface User {
 }
 
 function Login() {
-  const { loggedIn, setLoggedIn } = useContext(AppContext)
   const [userData, setUserData] = useState<{ email: string; password: string }>(
     { email: '', password: '' }
   )
-  // const [isLogin, setIsLogin] = useState(true)
+  const [isLogin, setIsLogin] = useState(true)
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -101,7 +98,7 @@ function Login() {
                 >
                   Log in
                 </button>
-                {!loggedIn ? (
+                {!isLogin ? (
                   <p>
                     Don&apos;t have an account? <a href='/register'>Sign Up</a>
                   </p>
@@ -109,7 +106,7 @@ function Login() {
                   <p>
                     Already have an account?{' '}
                     <button
-                      onClick={() => setLoggedIn(!loggedIn)}
+                      onClick={() => setIsLogin(!isLogin)}
                       type='submit'
                     >
                       Login
