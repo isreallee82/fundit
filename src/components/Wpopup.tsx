@@ -1,12 +1,12 @@
 import React from 'react'
 import '../style.css'
 
-const walletPop = (props: any) => {
+const Popup = (props: any) => {
   return (
-    <div className='xs:fixed md:w-2/5 md:top-28 z-40 xs:bottom-14 md:right-0 md:right-36 p-4 sm:w-4/5 xs:w-full md:h-2/5 rounded-3xl bg-stone-100 bg-opacity-60 backdrop-filter backdrop-blur-lg '>
-      <div className='bg-stone-300 rounded-3xl p-4 w-full h-full'>
+    <div className='xs:fixed md:w-2/6 md:top-28 z-40 xs:bottom-14 md:right-0 md:right-36 p-2 sm:w-2/6 xs:w-full lg:h-max md:h-max rounded-3xl bg-stone-300 bg-opacity-60 backdrop-filter backdrop-blur-lg '>
+      <div className='bg-stone-300 rounded-3xl p-2 w-full h-full'>
         <span
-          className='fixed pointer right-4 px-2 mr-3 text-xs font-medium text-stone-800 bg-stone-200 rounded-full dark:bg-stone-900 dark:text-stone-300'
+          className='fixed pointer right-4 px-2 mr-3 text-xs font-medium text-stone-800 bg-stone-300 rounded-full dark:bg-stone-900 dark:text-stone-300'
           onClick={props.handleClose}
         >
           <svg
@@ -24,10 +24,10 @@ const walletPop = (props: any) => {
             />
           </svg>
         </span>
-        {props.content}
+        <div className='flex flex-col gap 2'>{props.content}</div>
       </div>
     </div>
   )
 }
 
-export default walletPop
+export default Popup

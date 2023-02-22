@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import Sidebar from '../components/sidebar'
+import Sidebar from './sidebar'
 import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
-import { Injected, WalletConnect } from './conectors'
+import { Injected,  WalletConnect } from './conectors'
 
 declare global {
   interface Window {
@@ -14,7 +14,7 @@ declare global {
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
-  
+
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -27,7 +27,6 @@ const Navbar = () => {
       activate(Injected)
       setIsConnected(true)
       setHandleChange(!HandleChange)
-     
     } catch (error) {
       console.error(error)
     }
@@ -36,7 +35,15 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
-  const Disconnected = async (): Promise<void> => {
+  const Walletconnect = async () => {
+    try {
+      activate(WalletConnect)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const Disconnected = async () => {
     try {
       deactivate()
       setHandleChange(!HandleChange)
@@ -45,10 +52,10 @@ const Navbar = () => {
     }
   }
 
-  const Signout = async (): Promise<void> => {
+  const Signout = async () => {
     try {
-     setIsConnected(!isConnected)
-    setHandleChange(!HandleChange)
+      setIsConnected(!isConnected)
+      setHandleChange(!HandleChange)
     } catch (error) {
       console.error(error)
     }
@@ -135,10 +142,6 @@ const Navbar = () => {
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Investors
-                <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-black '>
-                  {' '}
-                  8{' '}
-                </span>
               </a>
             </li>
             <li className='flex-1'>
@@ -206,20 +209,11 @@ const Navbar = () => {
                 name='search'
               />
             </div>
-            <div className='lg:flex lg:flex-row md:hidden'>
-              <button
-                type='submit'
-                className='rounded-full hover:bg-slate-50 bg-slate-100 text-base pr-4 px-4'
-              >
-                Categories
-              </button>
-              <i className='fa-solid fa-plus'></i>
-            </div>
           </div>
         </div>
 
         <div className='xs:justify-end'>
-          {(!active && !isConnected) ? (
+          {!active && !isConnected ? (
             <button
               className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
               onClick={togglePopup}
@@ -228,26 +222,39 @@ const Navbar = () => {
               Connect
             </button>
           ) : (
-            <img
-              onClick={() => setHandleChange(!HandleChange)}
-              className=' h-12 w-12 object-cover rounded-full'
-              // src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
-              src={
-                active
-                  ? makeBlokie(address)
-                  : 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
-              }
-              alt='Current-profile'
-            />
+            <div className='flex flex-row gap-2 '>
+              <div className='flex p-1 items-center'>
+                <button
+                  className='ring-1 text-white text-base ring-stone-400 px-4 py-1 item-center mx-2 rounded-3xl'
+                  type='submit'
+                >
+                  Switch wallet
+                </button>
+              </div>
+              <img
+                onClick={() => setHandleChange(!HandleChange)}
+                className=' h-12 w-12 object-cover rounded-full'
+                // src='https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+                src={
+                  active
+                    ? makeBlokie(address)
+                    : 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80'
+                }
+                alt='Current-profile'
+              />
+            </div>
           )}
-          {(HandleChange) ? (
+          {HandleChange ? (
             <ul className='absolute bg-stone-300 backdrop-filter backdrop-blur-lg md:right-3 xs:right-0 md:w-1/6 xs:w-1/2 z-40 mt-2 rounded-lg shadow-xl px-4 md:text-base  xs:text-sm py-2'>
               <li className='m-2'>
                 Status: <strong> {active ? `Active` : `Not Connected`}</strong>
               </li>
               <li className='m-2'>
                 Account:{' '}
-                <strong> {active ? address.substring(0, length)+"..." : ''}</strong>
+                <strong>
+                  {' '}
+                  {active ? address.substring(0, length) + '...' : ''}
+                </strong>
               </li>
               <li className='m-2'>
                 Network: <strong>{active ? chainid() : ''}</strong>
@@ -282,11 +289,13 @@ const Navbar = () => {
                   onClick={() => Signout()}
                   type='submit'
                 >
-                 {isConnected ? "Sign Out" : "Sign in"}
+                  {isConnected ? 'Sign Out' : 'Sign in'}
                 </button>
               </li>
             </ul>
-          ): ''}
+          ) : (
+            ''
+          )}
         </div>
       </div>
       {isOpen && !isConnected && (
@@ -295,13 +304,11 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-
+                
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
-                  onClick={() => {
-                    activate(WalletConnect)
-                  }}
+                  onClick={() => Walletconnect()}
                 >
                   Wallet Connect
                 </button>

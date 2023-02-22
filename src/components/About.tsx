@@ -13,7 +13,7 @@ const About = () => {
             </div>
             <div className='backdrop-blur-sm bg-white/50 lg:px-4 lg:py-2 md:px-4 xs:px-2 md:py-2 xs:py-1 md:rounded-3xl xs:rounded-2xl'>
               <h5 className='text-black xs:text-sm'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing{' '}
+                Lorem ipsum dolor sit amet consectetur{' '}
               </h5>
             </div>
           </div>
@@ -25,7 +25,7 @@ const About = () => {
             </div>
             <div className='backdrop-blur-sm bg-white/50 lg:px-4 lg:py-2 md:px-4 xs:px-2 md:py-2 xs:py-1 md:rounded-3xl xs:rounded-2xl'>
               <h5 className='text-black-200 xs:text-sm'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing{' '}
+                Lorem ipsum dolor sit amet consectetur{' '}
               </h5>
             </div>
           </div>
@@ -37,7 +37,7 @@ const About = () => {
             </div>
             <div className='backdrop-blur-sm bg-white/50 lg:px-4 lg:py-2 md:px-4 xs:px-2 md:py-2 xs:py-1 md:rounded-3xl xs:rounded-2xl'>
               <h5 className='text-black-200 xs:text-sm'>
-                Lorem ipsum dolor sit amet consectetur, adipisicing{' '}
+                Lorem ipsum dolor sit amet consectetur{' '}
               </h5>
             </div>
           </div>

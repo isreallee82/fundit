@@ -30,12 +30,12 @@ const Donate = (props: propsType) => {
               <a href={`/donate/${data.id}`}>
                 <div className='relative shrink-0'>
                   <img
-                    className='w-full md:h-64 xs:h-24 object-cover hover:blur-0 brightness-50 rounded-3xl'
+                    className='w-full md:h-64 xs:h-24 brightness-50 hover:brightness-90  object-cover rounded-3xl'
                     src={data.imgUrls}
                     alt='donate'
                   />
                   <img
-                    className='absolute rounded-lg object-cover top-4 left-4 md:w-16 xs:w-8 md:h-14 xs:h-7'
+                    className='absolute rounded-lg  object-cover top-4 left-4 md:w-16 xs:w-8 md:h-14 xs:h-7'
                     src={makeBlokie(data.address)}
                     alt='chain'
                   />

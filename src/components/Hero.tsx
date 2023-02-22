@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import Wallet from './Wpopup'
+import { CoinbaseWallet } from './conectors'
+import { useWeb3React } from '@web3-react/core'
 
 const Hero = () => {
+  const { activate } = useWeb3React()
   const [isOpen, setIsOpen] = useState(false)
 
   const togglePopup = () => {
@@ -57,7 +60,7 @@ const Hero = () => {
         <Wallet
           content={
             <>
-              <div className='p-4'>
+              <div className='p-4 '>
                 <b>Connect your Account</b>
                 <p className='m-2'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -66,7 +69,14 @@ const Hero = () => {
                   laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                   irure dolor in reprehenderit in voluptate velit esse cillum.
                 </p>
-                <button>Test button</button>
+                <button
+                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
+                  onClick={() => {
+                    activate(CoinbaseWallet)
+                  }}
+                >
+                  Coinbase Wallet
+                </button>
               </div>
             </>
           }
