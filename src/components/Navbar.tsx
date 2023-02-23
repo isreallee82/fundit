@@ -9,8 +9,10 @@ import { Injected,  WalletConnect } from './conectors'
 declare global {
   interface Window {
     ethereum?: any
+    
   }
 }
+
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
@@ -81,7 +83,42 @@ const Navbar = () => {
     }
   }
 
-  var length = 7
+  const length = 7
+
+  // example of switching or adding network with Harmony Mainnet
+  const { library } = useWeb3React()
+   const switchNetwork = async () => {
+    try {
+      await library.provider.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x63564c40' }],
+      })
+    } catch (switchError: any) {
+      // 4902 error code indicates the chain is missing on the wallet
+      if (switchError.code === 4902) {
+        try {
+          await library.provider.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainId: '0x63564c40',
+                rpcUrls: ['https://api.harmony.one'],
+                chainName: 'Harmony Mainnet',
+                nativeCurrency: { name: 'ONE', decimals: 18, symbol: 'ONE' },
+                blockExplorerUrls: ['https://explorer.harmony.one'],
+                iconUrls: [
+                  'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
+                ],
+              },
+            ],
+          })
+        } catch (error) {
+          console.error(error)
+        }
+      }
+    }
+  }
+
   return (
     <>
       {toggleSidebar && <Sidebar />}
@@ -227,6 +264,7 @@ const Navbar = () => {
                 <button
                   className='ring-1 text-white text-base ring-stone-400 px-4 py-1 item-center mx-2 rounded-3xl'
                   type='submit'
+                  onClick={() => switchNetwork()}
                 >
                   Switch wallet
                 </button>
@@ -304,7 +342,7 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-                
+
                 <button
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
                   type='submit'
