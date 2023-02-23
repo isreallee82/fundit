@@ -4,15 +4,13 @@ import Sidebar from './sidebar'
 import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
-import { Injected,  WalletConnect } from './conectors'
+import { Injected, WalletConnect } from './conectors'
 
 declare global {
   interface Window {
     ethereum?: any
-    
   }
 }
-
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
@@ -87,11 +85,11 @@ const Navbar = () => {
 
   // example of switching or adding network with Harmony Mainnet
   const { library } = useWeb3React()
-   const switchNetwork = async () => {
+  const switchNetwork = async () => {
     try {
       await library.provider.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: ['0x63564c40', 5001] }],
+        params: [{ chainId: '0x1389' }],
       })
     } catch (switchError: any) {
       // 4902 error code indicates the chain is missing on the wallet
@@ -101,20 +99,10 @@ const Navbar = () => {
             method: 'wallet_addEthereumChain',
             params: [
               {
-                chainId: '0x63564c40',
-                rpcUrls: ['https://api.harmony.one'],
-                chainName: 'Harmony Mainnet',
-                nativeCurrency: { name: 'ONE', decimals: 18, symbol: 'ONE' },
-                blockExplorerUrls: ['https://explorer.harmony.one'],
-                iconUrls: [
-                  'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
-                ],
-              },
-              {
-                chainId: 5001,
+                chainId: '0x1389',
                 rpcUrls: ['https://rpc.testnet.mantle.xyz'],
                 chainName: 'Mantle Mainnet',
-                nativeCurrency: { name: 'ONE', decimals: 18, symbol: 'ONE' },
+                nativeCurrency: { name: 'BIT', decimals: 18, symbol: 'BIT' },
                 blockExplorerUrls: ['https://explorer.testnet.mantle.xyz/'],
                 iconUrls: [
                   'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
