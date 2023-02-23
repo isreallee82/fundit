@@ -115,7 +115,6 @@ const Navbar = () => {
                 rpcUrls: ['https://rpc.testnet.mantle.xyz'],
                 chainName: 'Mantle Mainnet',
                 nativeCurrency: { name: 'ONE', decimals: 18, symbol: 'ONE' },
-                blockExplorerUrls: ['https://explorer.harmony.one'],
                 iconUrls: [
                   'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
                 ],
