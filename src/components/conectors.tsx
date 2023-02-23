@@ -12,11 +12,11 @@ export const WalletConnect = new WalletConnectConnector({
 export const CoinbaseWallet = new WalletLinkConnector({
   url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
   appName: 'Web3-react Demo',
-  supportedChainIds: [1, 3, 4, 5, 42, 5001],
+  supportedChainIds: [1, 3, 4, 5, 42, 0x63564c40],
 })
 
 export const Injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42, 5001],
+  supportedChainIds: [1, 3, 4, 5, 42, 5001, 0x63564c40],
 })
 
 export const connectors = {

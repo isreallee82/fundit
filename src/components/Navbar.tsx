@@ -91,7 +91,7 @@ const Navbar = () => {
     try {
       await library.provider.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '0x63564c40' }],
+        params: [{ chainId: ['0x63564c40', 5001] }],
       })
     } catch (switchError: any) {
       // 4902 error code indicates the chain is missing on the wallet
@@ -110,6 +110,17 @@ const Navbar = () => {
                   'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
                 ],
               },
+              {
+                chainId: 5001,
+                rpcUrls: ['https://rpc.testnet.mantle.xyz'],
+                chainName: 'Mantle Mainnet',
+                nativeCurrency: { name: 'ONE', decimals: 18, symbol: 'ONE' },
+                blockExplorerUrls: ['https://explorer.harmony.one'],
+                iconUrls: [
+                  'https://harmonynews.one/wp-content/uploads/2019/11/slfdjs.png',
+                ],
+              },
+             
             ],
           })
         } catch (error) {
