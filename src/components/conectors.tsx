@@ -3,6 +3,8 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 // import { useWeb3React } from '@web3-react/core'
 
+const POLLING_INTERVAL = 8000;
+
 export const WalletConnect = new WalletConnectConnector({
   rpc: { 1: "https://mainnet.infura.io/v3/764ef7db11084cccb954721ea3cffe5f" },
   bridge: 'https://bridge.walletconnect.org',
