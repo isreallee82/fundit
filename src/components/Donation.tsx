@@ -12,6 +12,7 @@ const Donate = (props: propsType) => {
   const { datas } = props
   const new_data = datas.map((data) => data)
   var length = 32
+  var mdlength = 200
 
 
 
@@ -51,7 +52,8 @@ const Donate = (props: propsType) => {
                   {data.description.substring(0, length) + '...'}
                 </h5>
                 <h5 className='md:block xs:hidden md:text-base xs:text-xs'>
-                  <strong>Description: </strong> {data.description}
+                  <strong>Description: </strong>{' '}
+                  {data.description.substring(0, mdlength) + '...'}
                 </h5>
                 <div className='flex justify-between items-center py-2'>
                   <h5 className='text-green-500 font-bold md:text-base xs:text-sm '>
