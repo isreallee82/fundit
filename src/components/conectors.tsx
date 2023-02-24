@@ -4,9 +4,10 @@ import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 // import { useWeb3React } from '@web3-react/core'
 
 export const WalletConnect = new WalletConnectConnector({
-  rpc: `https://mainnet.infura.io/v3/764ef7db11084cccb954721ea3cffe5f`,
+  rpc: { 1: "https://mainnet.infura.io/v3/764ef7db11084cccb954721ea3cffe5f" },
   bridge: 'https://bridge.walletconnect.org',
   qrcode: true,
+  pollingInterval: POLLING_INTERVAL
 })
 
 export const CoinbaseWallet = new WalletLinkConnector({
