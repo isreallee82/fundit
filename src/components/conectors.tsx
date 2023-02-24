@@ -4,7 +4,7 @@ import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 // import { useWeb3React } from '@web3-react/core'
 
 export const WalletConnect = new WalletConnectConnector({
-  rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+  rpc: {1: `https://mainnet.infura.io/v3/764ef7db11084cccb954721ea3cffe5f`},
   bridge: 'https://bridge.walletconnect.org',
   qrcode: true,
 })
