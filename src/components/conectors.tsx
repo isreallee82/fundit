@@ -6,9 +6,10 @@ import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 // const POLLING_INTERVAL = 8000;
 
 export const WalletConnect = new WalletConnectConnector({
-  rpcUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
+  rpc: { 1: 'https://mainnet.infura.io/v3/764ef7db11084cccb954721ea3cffe5f' },
   bridge: 'https://bridge.walletconnect.org',
   qrcode: true,
+  // pollingInterval: POLLING_INTERVAL
 })
 
 export const CoinbaseWallet = new WalletLinkConnector({
