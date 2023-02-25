@@ -2,6 +2,7 @@ import { useWeb3React } from '@web3-react/core'
 import React, { useState } from 'react'
 import data from '../assets/data'
 import datas from '../assets/user'
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
   const { active } = useWeb3React()
   const [toggleSidebar, setToggleSidebar] = useState(false)
@@ -35,8 +36,8 @@ const Sidebar = () => {
             </span>
             <ul className='space-y-2 mt-4'>
               <li className='flex items-center'>
-                <a
-                  href='/'
+                <Link
+                 to='/'
                   className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                 >
                   <svg
@@ -50,12 +51,12 @@ const Sidebar = () => {
                     <path d='M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z'></path>
                   </svg>
                   <span className='ml-3'>Dashboard</span>
-                </a>
+                </Link>
               </li>
               {active && (
                 <li>
-                  <a
-                    href='/'
+                  <Link
+                   to='/'
                     className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                   >
                     <svg
@@ -73,13 +74,13 @@ const Sidebar = () => {
                     <span className='inline-flex items-center justify-center px-2 ml-3 text-xs font-medium text-stone-800 bg-stone-200 rounded-full dark:bg-stone-900 dark:text-stone-200'>
                       Pro
                     </span>
-                  </a>
+                  </Link>
                 </li>
               )}
               {active && (
                 <li>
-                  <a
-                    href='/create-project'
+                  <Link
+                   to='/create-project'
                     className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                   >
                     <svg
@@ -97,13 +98,13 @@ const Sidebar = () => {
                     <span className='inline-flex items-center justify-center px-2 ml-3 text-xs font-medium text-stone-800 bg-stone-200 rounded-full dark:bg-stone-900 dark:text-stone-200'>
                       Pro
                     </span>
-                  </a>
+                  </Link>
                 </li>
               )}
               {active && (
                 <li>
-                  <a
-                    href='/fundings'
+                  <Link
+                   to='/fundings'
                     className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                   >
                     <svg
@@ -122,12 +123,12 @@ const Sidebar = () => {
                     <span className='inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-xs font-medium text-stone-800 bg-stone-100 rounded-full dark:bg-stone-900 dark:text-stone-300'>
                       {data.donations.length}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               )}
               <li>
-                <a
-                  href='/'
+                <Link
+                 to='/'
                   className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                 >
                   <svg
@@ -147,14 +148,14 @@ const Sidebar = () => {
                   <span className='inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-xs font-medium text-stone-800 bg-stone-100 rounded-full dark:bg-stone-900 dark:text-stone-300'>
                     {datas.users.length}
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className='pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700'>
               {' '}
               <li>
-                <a
-                  href='/'
+                <Link
+                 to='/'
                   className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                 >
                   <svg
@@ -171,11 +172,11 @@ const Sidebar = () => {
                     ></path>
                   </svg>
                   <span className='flex-1 ml-3 whitespace-nowrap'>Sign In</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href='/'
+                <Link
+                 to='/'
                   className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                 >
                   <svg
@@ -192,7 +193,7 @@ const Sidebar = () => {
                     ></path>
                   </svg>
                   <span className='flex-1 ml-3 whitespace-nowrap'>Sign Up</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

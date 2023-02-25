@@ -21,7 +21,6 @@ function getLibrary(provider: any) {
   return new Web3Provider(provider)
 }
 
-
 export default function App() {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
@@ -38,7 +37,7 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/fundings' element={<Donation />} />
           <Route path='/create-project' element={<CreateProject />} />
-          <Route path='/donate/:Id' element={<ProjectDetails  />} />
+          <Route path='/donate/:Id' element={<ProjectDetails />} />
           <Route path='*' element={<h1>Page not Found!</h1>} />
         </Routes>
       </Router>
