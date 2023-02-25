@@ -65,7 +65,7 @@ const data  = datas.donations.find((data) => data.id === Id);
               </h5>
               <h5 className='md:text-sm xs:text-xs font-bold'>{date}</h5>
             </div>
-            <Link to='/donations'>Donations</Link>
+            <Link to='/fundings'>Donations</Link>
           </div>
         </div>
       </div>
