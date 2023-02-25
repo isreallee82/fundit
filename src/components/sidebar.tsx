@@ -177,7 +177,7 @@ const Sidebar = () => {
               <li>
                 <Link
                  to='/'
-                  className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+                  className='flex items-center p-2 text-base font-normal text-slate-100 rounded-lg dark:text-white hover:bg-stone-500 dark:hover:bg-gray-700'
                 >
                   <svg
                     aria-hidden='true'
