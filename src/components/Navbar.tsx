@@ -5,6 +5,7 @@ import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
 import { Injected, WalletConnect } from './conectors'
+import { Link } from 'react-router-dom'
 
 declare global {
   interface Window {
@@ -156,32 +157,32 @@ const Navbar = () => {
         <div className='lg:flex md:gap-6 text-white md:flex xs:hidden sm:gap-2'>
           <ul className='flex items-center gap-2 text-sm font-medium '>
             <li className='flex-1 '>
-              <a
-                href='/'
+              <Link
+                to='/'
                 className='text-grey  relative flex items-center justify-center gap-2 rounded-lg bg-stone-600 px-3 py-2 shadow hover:bg-stone-700 hover:text-white'
               >
                 FundIt
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/about'
+              <Link
+                to='/about'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/investors'
+              <Link
+                to='/investors'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Investors
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/fundings'
+              <Link
+                to='/fundings'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Fundings
@@ -189,7 +190,7 @@ const Navbar = () => {
                   {' '}
                   8{' '}
                 </span>
-              </a>
+              </Link>
             </li>
             <li className='flex-1 md:hidden '>
               <button
@@ -296,9 +297,9 @@ const Navbar = () => {
                 Network: <strong>{active ? chainid() : ''}</strong>
               </li>
               <li className='m-2'>
-                <a className='text-blue-500' href='/contact'>
+                <Link className='text-blue-500' to='/contact'>
                   Profile
-                </a>
+                </Link>
               </li>
               <li className='m-2'>
                 {active ? (

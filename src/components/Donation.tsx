@@ -1,16 +1,15 @@
 import { Donation } from '../../type.d'
 import React from 'react'
-// import data from '../assets/data'
+import { Link } from 'react-router-dom'
 
 import makeBlokie from 'ethereum-blockies-base64'
 
 type propsType = {
-  datas: Donation[]
+  data: Donation[]
 }
 
-const Donate = (props: propsType) => {
-  const { datas } = props
-  const new_data = datas.map((data) => data)
+const Donate = ({data}: propsType) => {
+  const new_data = data.map((data) => data )
   var length = 32
   var mdlength = 200
 
@@ -28,7 +27,7 @@ const Donate = (props: propsType) => {
               key={data.id}
               className='md:w-full md:flex p-3 ring-2 ring-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col text-stone-300 rounded-3xl'
             >
-              <a href={`/donate/${data.id}`}>
+              <Link to={`/donate/${data.id}`}>
                 <div className='relative shrink-0'>
                   <img
                     className='w-full md:h-64 xs:h-24 brightness-50 hover:brightness-90  object-cover rounded-3xl'
@@ -41,7 +40,7 @@ const Donate = (props: propsType) => {
                     alt='chain'
                   />
                 </div>
-              </a>
+              </Link>
 
               <div className='flex flex-col gap-4 text-black-400 text-base mt-4 '>
                 <h5 className='my-2'>

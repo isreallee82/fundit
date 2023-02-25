@@ -17,7 +17,7 @@ function Home() {
       {/* <About /> */}
       <AboutUs />
       <Testimonials />
-      <Donate datas={data.donations} />
+      <Donate data={data.donations} />
       <Footer />
       <Nav data={data.donations} />
     </div>

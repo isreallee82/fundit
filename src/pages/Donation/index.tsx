@@ -13,7 +13,7 @@ const Donation = () => {
       <div className='flex container mt-6 md:hidden mx-4'>
         <h1 className='capitalize text-white text-2xl '>Projects</h1>
       </div>
-      <Donate datas={data.donations} />
+      <Donate data={data.donations} />
       <Footer />
       <Nav data={data.donations} />
     </div>

@@ -1,6 +1,6 @@
 
 export interface Donation {
-  id: number
+  id: string
   name: string
   description: string
   amount_raised: number

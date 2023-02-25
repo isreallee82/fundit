@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Sidebar from './sidebar'
 import { Donation } from '../../type'
+import { Link } from 'react-router-dom'
 
 type propsType = {
   data: Donation[]
@@ -17,39 +18,39 @@ const Nav = (props: propsType) => {
         <div className='overflow-hidden rounded-sm border-t border-t-stone-500  bg-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-2xl p-2'>
           <ul className='flex items-center gap-2 text-sm font-medium '>
             <li className='flex-1 '>
-              <a
-                href='/'
+              <Link
+                to='/'
                 className='text-grey  relative flex items-center justify-center gap-2 rounded-lg bg-stone-600 px-3 py-2 shadow hover:bg-stone-700 hover:text-white'
               >
                 FundIt
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/about'
+              <Link
+                to='/about'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/investors'
+              <Link
+                to='/investors'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-black hover:shadow'
               >
                 Investors
-              </a>
+              </Link>
             </li>
             <li className='flex-1'>
-              <a
-                href='/fundings'
+              <Link
+                to='/fundings'
                 className='flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-grey  hover:bg-stone-700 hover:text-white hover:shadow'
               >
                 Projects
                 <span className='rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-black '>
                   {new_data.length}
                 </span>
-              </a>
+              </Link>
             </li>
             <li className='flex-1 '>
               <button

@@ -14,7 +14,7 @@ import { Web3ReactProvider } from '@web3-react/core'
 import { Web3Provider } from '@ethersproject/providers'
 import Investors from './pages/investors'
 import ProjectDetails from './pages/projectDetails'
-import data from './assets/data'
+// import data from './assets/data'
 import CreateProject from './pages/createProject'
 
 function getLibrary(provider: any) {
@@ -38,7 +38,7 @@ export default function App() {
           <Route path='/about' element={<About />} />
           <Route path='/fundings' element={<Donation />} />
           <Route path='/create-project' element={<CreateProject />} />
-          <Route path='/donate/:id' element={<ProjectDetails data={data.donations[0]} />} />
+          <Route path='/donate/:Id' element={<ProjectDetails  />} />
           <Route path='*' element={<h1>Page not Found!</h1>} />
         </Routes>
       </Router>
