@@ -12,16 +12,16 @@ const data  = datas.donations.find((data) => data.id === Id);
   const { id, name, description, amount_raised, date, address, imgUrls }: any = data
 
   return (
-    <div className='lg:p-4 grid bg-gradient-to-r from-stone-800 to-gray-900 h-full justify-center w-full md:p-4'>
-      <div className='lg:text-3xl md:flex justify-center xs:hidden md:text-lg sm:text-lg mt-6 font-bold text-center'>
+    <div className='grid bg-gradient-to-r from-stone-800 to-gray-900 h-screen justify-center '>
+      <div className='lg:text-3xl md:flex justify-center md:text-lg sm:text-lg mt-6 font-bold text-center'>
         <h1 className='text-stone-300'>{name} Details</h1>
       </div>
-      <div className='md:container md:mx-auto xs:mx-2 lg:px-28 md:px-16 sm:px-16 xs:px-0 lg:my-28 md:my-28 sm:my-16 grid rounded-3xl lg:grid-cols-3 md:grid-cols-2 md:gap-8 xs:gap-4 md:justify-items-center xs:grid-cols-2 m-2 p-2'>
+     
         <div
           key={id}
-          className='md:w-full md:flex p-3 ring-2 ring-stone-500 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col text-stone-300 rounded-3xl'
+          className='md:w-full md:flex md:flex-row p-3 bg-opacity-60 backdrop-filter backdrop-blur-sm gap-2 flex-col text-stone-300 '
         >
-          <div className='relative shrink-0'>
+          <div className='relative constainer mx-8 shrink-0'>
             <img
               className='w-full md:h-64 xs:h-24 object-cover hover:blur-0 brightness-50 rounded-3xl'
               src={imgUrls}
@@ -58,7 +58,6 @@ const data  = datas.donations.find((data) => data.id === Id);
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
