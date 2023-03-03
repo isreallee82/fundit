@@ -2,7 +2,8 @@
 
 ## Images
 
-<a href="https://ibb.co/5vYBV8q"><img src="https://i.ibb.co/5vYBV8q/snip-4.png" alt="snip-4" border="0" width="100%"></a>
+<a href="https://ibb.co/HdZTK8h"><img src="https://i.ibb.co/rs92Qrd/snip.png" alt="snip" border="0"></a>
+
 
 
 This is a React web application for a crowdfunding platform that uses web3 technology and Ethereum blockchain to facilitate donations and provide non-fungible tokens (NFTs) to donors. The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.
@@ -15,7 +16,7 @@ The platform ensures the transparency and security of donations by leveraging bl
 The application is built using React, Web3.js, and Ethereum blockchain.
 Getting Started
 
-
+<a href="https://ibb.co/5vYBV8q"><img src="https://i.ibb.co/wCJM1WD/snip-4.png" alt="snip-4" border="0"></a>
 
 ##  To get started with the application, you can follow these steps:
 
