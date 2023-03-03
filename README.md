@@ -2,7 +2,7 @@
 
 ## Images
 
-<a href="https://ibb.co/HdZTK8h"><img src="https://i.ibb.co/HdZTK8h/snip.png" alt="snip" border="0"></a>
+<a href="https://ibb.co/HdZTK8h"><img src="https://i.ibb.co/HdZTK8h/snip.png" alt="snip" border="0" width="100%"></a>
 ****
 <a href="https://ibb.co/5vYBV8q"><img src="https://i.ibb.co/5vYBV8q/snip-4.png" alt="snip-4" border="0"></a>
 
