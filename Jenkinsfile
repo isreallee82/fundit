@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('check-Script') {
       steps {
-        git 'https://github.com/isreallee82/fundit'
+        git(url: 'https://github.com/isreallee82/fundit', branch: 'main')
       }
     }
 
