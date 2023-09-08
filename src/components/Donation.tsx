@@ -73,24 +73,3 @@ const Donate = ({data}: propsType) => {
 }
 
 export default Donate
-
-//  <template>
-//   <div>
-//     <img className="rounded"  src={require('../538.png')} alt='chain' />
-//     <div className="mt-2">
-//       <div>
-//         <div className="text-xs text-slate-600 uppercase font-bold tracking-wider">{{ eyebrow }}</div>
-//         <div className="font-bold text-slate-700 leading-snug">
-//           <a :href="url" className="hover:underline">{{ title }}</a>
-//         </div>
-//         <div className="mt-2 text-sm text-slate-600">{{ pricing }}</div>
-//       </div>
-//     </div>
-//   </div>
-// </template>
-
-// <script>
-//   export default {
-//     props: ['img', 'imgAlt', 'eyebrow', 'title', 'pricing', 'url']
-//   }
-// </script>

@@ -19,7 +19,7 @@ export default function HeroSec() {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-stone-300 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gold-900/10">
             <div className="flex items-center justify-between">
-              <a href="https://fundit.netlify.com" className="-m-1.5 p-1.5">
+              <a href="https://funditt.netlify.com" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-8 w-auto"
@@ -51,7 +51,7 @@ export default function HeroSec() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="https://fundit.netlify.com"
+                    href="https://funditt.netlify.com"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gold-900 hover:bg-gold-50"
                   >
                     Log in
@@ -80,7 +80,7 @@ export default function HeroSec() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gold-600 ring-1 ring-stone-400 hover:ring-stone-900">
               Announcing our next round of funding.{' '}
-              <a href="https://fundit.netlify.com" className="font-semibold text-stone-600">
+              <a href="https://funditt.netlify.com" className="font-semibold text-stone-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
