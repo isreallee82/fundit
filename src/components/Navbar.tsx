@@ -223,11 +223,11 @@ const Navbar = () => {
         </div>
 
         <div className='flex md:flex-row md:gap-4 p-2'>
-          <div className='md:flex xs:hidden flex-row lg:gap-6 lg:mx-8 md:mx-4  w-5/6'>
+          <div className='md:flex xs:hidden flex-row lg:gap-6 lg:mx-8 md:mx-4 w-5/6'>
             <div>
               <div className='absolute pointer-events-auto'>
                 <svg
-                  className='absolute text-slate-400 h-7 w-12'
+                  className='absolute text-slate-400 h-7 w-12 p-1'
                   viewBox='0 0 20 20'
                   fill='currentColor'
                 >
