@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
     </div>
     <div className="md:px-16 sm:px-4 py-6 bg-stone-100 dark:bg-stone-700 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-stone-500 dark:text-stone-300 sm:text-center">© 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
+        <span className="text-sm text-stone-500 dark:text-stone-300 sm:text-center">© 2023 <a href="https://github.com/isreallee82">Leedox™</a>. All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
             <a href="https://facebook.com/ajayi-isreal" className="text-stone-400 hover:text-stone-900 dark:hover:text-white">

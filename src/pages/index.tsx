@@ -9,12 +9,14 @@ import Footer from '../components/Footer'
 import data from '../assets/data'
 import Nav from '../components/Nav'
 import Feature from '../components/Feautures'
+import HeroSec from '../components/HeroSec'
 
 function Home() {
   return (
     <div className='relative pt-6 bg-gradient-to-r from-stone-800 to-gray-900 md:text-lg sm:text-base'>
       <Navbar />
       <Hero />
+      <HeroSec />
       <About />
       <Feature />
       <AboutUs />
