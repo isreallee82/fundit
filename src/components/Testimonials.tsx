@@ -8,8 +8,7 @@ export default function Testimonials() {
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-gold-900 sm:text-2xl sm:leading-9">
             <p>
-              “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-              molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+            "Decentralized FundMe has changed the way I engage with causes that matter to me. The transparency of the platform is unparalleled, which builds trust and inspires me to give more. As a campaign creator, I found the platform intuitive and user-friendly. It allowed me to share my story and connect with a global community of supporters. The security provided by smart contracts gave me peace of mind. it's a movement that empowers individuals to create change, and I'm proud to be a part of it."
             </p>
           </blockquote>
           <figcaption className="mt-10">
