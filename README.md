@@ -1,48 +1,118 @@
-##  Crowdfunding Web3 Webpage
+# Decentralized FundMe
 
-## Images
+<img width="1680" alt="Screenshot 2023-08-28 at 00 42 55" src="https://github.com/isreallee82/fundit/assets/70828114/2e447e9e-6d5c-4dcb-b60d-85d6ad420e9f">
 
-<a href="https://ibb.co/HdZTK8h"><img src="https://i.ibb.co/rs92Qrd/snip.png" alt="snip" border="0"></a>
+----
 
+**Images**
 
+<table>
+  <tr>
+    <td align="center">
+      <img width="1680" alt="fundit5" src="https://github.com/isreallee82/fundit/assets/70828114/eb01f1b5-a83b-4179-a70c-a2713b70291d">
+      <br />
+    </td>
+    <td align="center">
+     <img width="1680" alt="fundit4" src="https://github.com/isreallee82/fundit/assets/70828114/0e0a8b7d-d01b-40c2-ae44-e70f87d8ed82">
+      <br />
+    </td>
+    <td align="center">
+      <img width="1680" alt="fundit3" src="https://github.com/isreallee82/fundit/assets/70828114/09021599-e3bf-4239-8f17-182456dc5761">
+      <br />
+    </td>
+  </tr>
+</table>
 
-This is a React web application for a crowdfunding platform that uses web3 technology and Ethereum blockchain to facilitate donations and provide non-fungible tokens (NFTs) to donors. The purpose of this platform is to support less privileged individuals and promote social good in a transparent and secure way.
+<img width="1680" alt="fundit2" src="https://github.com/isreallee82/fundit/assets/70828114/8934a07d-6b2e-4617-bc93-88cd0be90dae">
 
-##  Features
+**Introduction**
 
-Users can make donations using Ethereum.
-Donors receive a free NFT in return for their donation.
-The platform ensures the transparency and security of donations by leveraging blockchain technology.
-The application is built using React, Web3.js, and Ethereum blockchain.
-Getting Started
+Welcome to Decentralized FundMe, a revolutionary crowdfunding platform that combines transparency, security, and user-friendliness to empower individuals and organizations to create meaningful change. With Decentralized FundMe, you can confidently support causes that matter to you, knowing that your contributions are transparently tracked through blockchain technology.
 
-<a href="https://ibb.co/5vYBV8q"><img src="https://i.ibb.co/wCJM1WD/snip-4.png" alt="snip-4" border="0"></a>
+- **Deployed Project:** [Decentralized FundMe Platform](https://netlify.funditt.com)
+- **Final Project Blog Article:** [Read the Blog Post](https://www.linkedin.com/pulse/revolutionizing-crowdfunding-introducing-fundme-funditt-ajayi-israel)
+- **Author:** Ajayi Israel
+- **Author's LinkedIn:** [Ajayi Israel on LinkedIn](https://github.com/isreallee82)
 
-##  To get started with the application, you can follow these steps:
+**Installation**
 
-Clone the repository or download the source code.
-Install the required dependencies using npm install.
-Run the application using npm start.
-Usage
+To set up Decentralized FundMe locally, follow these steps:
 
-<a href="https://ibb.co/R30gSbT"><img src="https://i.ibb.co/pfz1Pwj/snip2.png" alt="snip2" border="0"></a>
-<a href="https://ibb.co/8Bsz58p"><img src="https://i.ibb.co/thKZsCt/snip3.png" alt="snip3" border="0"></a>
-<a href="https://ibb.co/JymH1fx"><img src="https://i.ibb.co/MGZ7vY8/snip5.png" alt="snip5" border="0"></a>
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/your-repo.git
+   ```
 
-Once the application is running, you can access the crowdfunding platform in your web browser by navigating to http://localhost:3000. You can make donations using Ethereum and receive NFTs in return. The platform provides real-time updates on the status of donations and ensures the transparency and security of the transactions.
+2. Install project dependencies using Yarn:
+   ```
+   yarn install
+   ```
 
-## <a href="https://ibb.co/HdZTK8h"><img src="https://i.ibb.co/HdZTK8h/snip.png" alt="snip" border="0"></a> <a href="https://ibb.co/5vYBV8q"><img src="https://i.ibb.co/5vYBV8q/snip-4.png" alt="snip-4" border="0"></a> <a href="https://ibb.co/R30gSbT"><img src="https://i.ibb.co/R30gSbT/snip2.png" alt="snip2" border="0"></a> <a href="https://ibb.co/8Bsz58p"><img src="https://i.ibb.co/8Bsz58p/snip3.png" alt="snip3" border="0"></a> <a href="https://ibb.co/JymH1fx"><img src="https://i.ibb.co/JymH1fx/snip5.png" alt="snip5" border="0"></a>
+3. Start the development server:
+   ```
+   yarn start
+   ```
 
-##  Contributing
+**Usage**
 
-Contributions are welcome! If you find any bugs or have suggestions for new features, please open an issue or submit a pull request.
+Decentralized FundMe is designed to be user-friendly and accessible to all. Here's how you can use the platform:
 
-##  License
+1. Sign up or log in to your account.
+2. Explore ongoing campaigns or create your own.
+3. Contribute to campaigns securely using Ethereum.
+4. Track your contributions transparently through blockchain technology.
+5. Stay connected with campaign creators and fellow contributors.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+**Contributing**
 
-## Contact
+We welcome contributions from the community to make Decentralized FundMe even better. If you'd like to contribute, please follow these guidelines:
 
-If you have any questions or concerns, please contact us at [isreallee82@gmail.com].
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and test them thoroughly.
+4. Commit your changes with clear and concise commit messages.
+5. Push your changes to your fork.
+6. Create a pull request to merge your changes into the main repository.
 
-Website: [https://funditt.netlify.com]
+   <table>
+  <tr>
+    <td align="center">
+      <img width="522" alt="fundit10" src="https://github.com/isreallee82/fundit/assets/70828114/07594aaa-06ea-4199-8ec6-120113456beb">
+      <br />
+    </td>
+    <td align="center">
+     <img width="522" alt="fundit9" src="https://github.com/isreallee82/fundit/assets/70828114/a846a9fe-2a20-4ac4-911b-ce95a5be2b10">
+      <br />
+    </td>
+    <td align="center">
+      <img width="522" alt="fundit8" src="https://github.com/isreallee82/fundit/assets/70828114/72361fd0-a31d-405f-8919-64a5269cd0eb">
+      <br />
+    </td>
+    <td align="center">
+      <img width="522" alt="fundit 7" src="https://github.com/isreallee82/fundit/assets/70828114/59ae13e3-d157-403f-bbe5-629190b25b2f">
+      <br />
+    </td>
+    <td align="center">
+      <img width="522" alt="fundit12" src="https://github.com/isreallee82/fundit/assets/70828114/d732ee9f-a0a7-4d2e-9789-26da5c54b6d1">
+      <br />
+    </td>
+    <td align="center">
+      <img width="522" alt="funit11" src="https://github.com/isreallee82/fundit/assets/70828114/1cd13cfc-2ab5-41a5-a76f-744a6e98c8d5">
+      <br />
+    </td>
+  </tr>
+</table>
+   
+**Related Projects**
+
+Check out these related projects:
+
+1. [Blockchain for Social Good](https://github.com/isreallee82/funditt): A research project on the impact of blockchain technology in social initiatives.
+
+**Licensing**
+
+This project is licensed under the MIT License. See the [LICENSE]() file for details.
+
+---
+
+Feel free to customize this README.md with your specific project details and structure. It serves as a comprehensive guide for users and contributors to understand, install, and contribute to your Decentralized FundMe platform.
