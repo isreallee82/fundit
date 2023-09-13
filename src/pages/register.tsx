@@ -20,7 +20,7 @@ import { redirect } from 'react-router-dom'
     }
     
     function Register() {
-      const [userData, setUserData] = useState<User>({ email: " ", password: " " });
+      const [userData, setUserData] = useState<User>({ email: "", password: "" });
       const [login, setRegister] = useState<boolean>(false);
     
       useEffect(() => {
@@ -43,7 +43,7 @@ import { redirect } from 'react-router-dom'
           const configuration = {
             method: "post",
             url: "https://funding-d91e83bfa894.herokuapp.com/register",
-            data: {userData},
+            data: {email: userData.email, password: userData.password},
           };
 
     
@@ -54,6 +54,7 @@ import { redirect } from 'react-router-dom'
           .then((result) => {setRegister(true);
           }).catch((error) => {error = new Error();});
           // Assuming a successful response means login is successful
+          alert("Registration Successful");
           setRegister(true);
         } catch (error) {
           // Handle error appropriately, e.g., display an error message
@@ -63,9 +64,9 @@ import { redirect } from 'react-router-dom'
     
       return (
         <>
-          <section className='contaniner mx:auto bg-gray-50 bg-gray-900 text-white'>
-            <div className='flex flex-col bg-gray-900 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
-              <div className='w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700'>
+          <section className='contaniner mx:auto bg-gradient-to-r from-stone-800 to-gray-900 text-white'>
+            <div className='flex flex-col bg-gradient-to-r from-stone-800 to-gray-900 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
+              <div className='w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gradient-to-r from-stone-800 to-gray-900 dark:border-stone-400'>
                 <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
                   <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
                     Register
@@ -114,7 +115,7 @@ import { redirect } from 'react-router-dom'
                       <p>
                         Already have an account?{' '}
                         <a href='/login' className=' text-blue-600 hover:underline'>
-                          Login
+                        {' '} Login
                         </a>
                       </p>
                    
