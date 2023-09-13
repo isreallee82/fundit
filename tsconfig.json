@@ -28,6 +28,8 @@
   "include": [
     "src/**/*/*",
     "**/*.ts",
+    "**/*.js",
+    "**/*.jsx",
     "**/*.tsx"
 , "src/App.tsx"  ],
   "exclude": [
