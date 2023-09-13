@@ -16,6 +16,7 @@ import Investors from './pages/investors'
 import ProjectDetails from './pages/projectDetails'
 // import data from './assets/data'
 import CreateProject from './pages/createProject'
+import Register from './pages/register'
 
 function getLibrary(provider: any) {
   return new Web3Provider(provider)
@@ -27,8 +28,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Index />} />
-          <Route path='/login' element={<Index />} />
-          <Route path='/register' element={<Index />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/login' element={<Login />} />
           <Route path='/user' element={<User />} />
