@@ -19,7 +19,7 @@ export interface User {
 }
 
 function Login() {
-  const [userData, setUserData] = useState<User>({ email: " ", password: " " });
+  const [userData, setUserData] = useState<User>({ email: "", password: "" });
   const [login, setLogin] = useState<boolean>(false);
 
   useEffect(() => {
@@ -41,8 +41,11 @@ function Login() {
   // set configurations
   const configuration = {
     method: "post",
-    url: "https://funding-d91e83bfa894.herokuapp.com/login",
-    data: {userData},
+    url: `https://funding-d91e83bfa894.herokuapp.com/login`,
+    data: {
+      email: userData.email,
+      password: userData.password,
+    },
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -68,9 +71,9 @@ function Login() {
 
   return (
     <>
-      <section className='contaniner mx:auto bg-gray-50 bg-gray-900 text-white'>
-        <div className='flex flex-col bg-gray-900 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
-          <div className='w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700'>
+       <section className='contaniner mx:auto bg-gradient-to-r from-stone-800 to-gray-900 text-white'>
+            <div className='flex flex-col bg-gradient-to-r from-stone-800 to-gray-900 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
+              <div className='w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gradient-to-r from-stone-800 to-gray-900 dark:border-stone-400'>
             <div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
               <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
                 Sign in
@@ -118,14 +121,7 @@ function Login() {
                 </button>
                
                   <p>
-                    Don&apos;t have an account? <a href='/register'>Sign Up</a>
-                  </p>
-               
-                  <p>
-                    Already have an account?{' '}
-                    <a href='/login' className=' text-blue-600 hover:underline'>
-                      Login
-                    </a>
+                    Don&apos;t have an account? <a className=' text-blue-600 hover:underline' href='/register'>Sign Up</a>
                   </p>
                
               </form>
