@@ -4,9 +4,11 @@ import Sidebar from './sidebar'
 import Popup from './popup'
 import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
-import { Injected, WalletConnect } from './conectors'
+import { Injected } from './conectors'
 import { Link } from 'react-router-dom'
-import { Web3Button } from '@web3modal/react'
+import { useWeb3Modal } from '@web3modal/react'
+import { Web3NetworkSwitch } from "@web3modal/react";
+import { useAccount, useDisconnect } from "wagmi";
 declare global {
   interface Window {
     ethereum?: any
@@ -16,30 +18,50 @@ declare global {
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
-
+  const { open, close } = useWeb3Modal()
   const [HandleChange, setHandleChange] = useState(false)
   const [toggleSidebar, setToggleSidebar] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  const [isConnected, setIsConnected] = useState(false)
+
+  const [loading, setLoading] = useState(false);
+  const { isConnected } = useAccount();
+  const { disconnect } = useDisconnect();
+  const label = isConnected ? "Disconnect" : "Connect Custom";
 
   const connectToEthereum = async (): Promise<void> => {
     try {
       // Request the user's permission to connect to MetaMask
       await window.ethereum.request({ method: 'eth_requestAccounts' })
       activate(Injected)
-      setIsConnected(true)
+      disconnect()
       setHandleChange(!HandleChange)
     } catch (error) {
       console.error(error)
     }
   }
+
+    async function onOpen() {
+    setLoading(true);
+    await open();
+    setLoading(false);
+  }
+
+  function onClick() {
+    if (isConnected) {
+      disconnect();
+    } else {
+      Walletconnect()
+      onOpen();
+    }
+  }
+
   const togglePopup = () => {
     setIsOpen(!isOpen)
   }
 
   const Walletconnect = async () => {
     try {
-      activate(WalletConnect)
+      open()
     } catch (error) {
       console.error(error)
     }
@@ -48,6 +70,8 @@ const Navbar = () => {
   const Disconnected = async () => {
     try {
       deactivate()
+      close()
+      disconnect()
       setHandleChange(!HandleChange)
     } catch (error) {
       console.error(error)
@@ -56,7 +80,8 @@ const Navbar = () => {
 
   const Signout = async () => {
     try {
-      setIsConnected(!isConnected)
+      disconnect()
+      deactivate()
       setHandleChange(!HandleChange)
     } catch (error) {
       console.error(error)
@@ -268,6 +293,7 @@ const Navbar = () => {
                 >
                   Switch wallet
                 </button>
+                <Web3NetworkSwitch />
               </div>
               <img
                 onClick={() => setHandleChange(!HandleChange)}
@@ -342,7 +368,9 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-                <Web3Button />
+                <button onClick={onClick} disabled={loading} type="submit" className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'>
+                {loading ? "Loading..." : label}
+                </button>
                 <button
                   type='submit'
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
@@ -361,5 +389,4 @@ const Navbar = () => {
     </>
   )
 }
-
 export default Navbar
