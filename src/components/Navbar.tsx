@@ -26,7 +26,7 @@ const Navbar = () => {
   const [loading, setLoading] = useState(false);
   const { isConnected } = useAccount();
   const { disconnect } = useDisconnect();
-  const label = isConnected ? "Disconnect" : "Connect Custom";
+  const label = isConnected ? "Disconnect" : "Connect";
 
   const connectToEthereum = async (): Promise<void> => {
     try {
