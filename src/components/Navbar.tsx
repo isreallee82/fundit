@@ -6,12 +6,13 @@ import makeBlokie from 'ethereum-blockies-base64'
 import { useWeb3React } from '@web3-react/core'
 import { Injected, WalletConnect } from './conectors'
 import { Link } from 'react-router-dom'
-
+import { Web3Button } from '@web3modal/react'
 declare global {
   interface Window {
     ethereum?: any
   }
 }
+
 
 const Navbar = () => {
   const { active, chainId, account, activate, deactivate } = useWeb3React()
@@ -341,14 +342,7 @@ const Navbar = () => {
             <>
               <div className='p-4 flex bg-stone-300 flex-col gap-2 rounded-lg'>
                 <b>Connect your wallet</b>
-
-                <button
-                  className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
-                  type='submit'
-                  onClick={() => Walletconnect()}
-                >
-                  Wallet Connect
-                </button>
+                <Web3Button />
                 <button
                   type='submit'
                   className=' bg-stone-700 text-stone-200 rounded-full p-2 xs:m-1 mr-0 px-4'
