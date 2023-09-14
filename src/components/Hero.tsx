@@ -12,8 +12,8 @@ const Hero = () => {
   }
   return (
     <>
-      <div className='md:mx-auto items-center justify-center flex lg:flex-row md:flex-col xs:flex-col lg:w-4/5 md:w-2/3  bg-stone-200 bg-opacity-60 backdrop-filter backdrop-blur-lg md:my-24 lg:my-24 xs:my-8 xs:p-10 md:m-2 xs:m-4 xs:rounded-3xl font-serif'>
-        <div className='lg:ml-12 lg:pl-12 flex lg:my-16 md:flex-col xs:flex-col lg:w-1/2 md:w-full md:justify-center xs:w-full md:h-full lg:p-16'>
+      <div className='md:mx-auto items-center justify-center flex lg:flex-row md:flex-col xs:flex-col lg:w-4/5 md:w-2/3  bg-stone-200 bg-opacity-60 backdrop-filter backdrop-blur-lg md:mt-20 md:mb-24 xs:my-8 xs:p-10 md:m-2 xs:m-4 xs:rounded-3xl font-serif'>
+        <div className='lg:ml-12 lg:pl-12 flex lg:my-16 md:flex-col xs:flex-col lg:w-1/2 md:w-full md:justify-center xs:w-full md:h-full lg:p-20'>
           <div className='lg:w-3/4 shrink-0 lg:h-full md:justify-center'>
             <img
               className='hero-pics lg:hidden object-cover object-center xs:w-full xs:h-64 rounded-3xl'
