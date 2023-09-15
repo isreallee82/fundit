@@ -287,7 +287,7 @@ const Navbar = () => {
             <div className='flex flex-row gap-2 '>
               <div className='flex p-1 items-center'>
                 <button
-                  className='sm:hidden ring-1 text-white text-base ring-stone-400 px-4 py-1 item-center mx-2 rounded-3xl'
+                  className='hidden ring-1 text-white text-base ring-stone-400 px-4 py-1 item-center mx-2 rounded-3xl'
                   type='submit'
                   onClick={() => switchNetwork()}
                 >
