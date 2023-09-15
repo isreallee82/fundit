@@ -20,7 +20,6 @@ function getLibrary(provider: any) {
 const token = cookies.get("TOKEN");
 
 const status: Status = token ? 'no-authenticated' : 'authenticated'
-
 type Status = 'checking' | 'authenticated' | 'no-authenticated'
 
 
