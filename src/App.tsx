@@ -1,46 +1,31 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Index from './pages'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-import './App.css'
-import About from './pages/About'
-import Donation from './pages/Donation'
-import Contact from './pages/contact'
-import User from './pages/Dashboard/user'
-import Admin from './pages/Dashboard/admin'
-import Login from './pages/login'
-import { Web3ReactProvider } from '@web3-react/core'
-// import { ethers } from 'ethers'
-import { Web3Provider } from '@ethersproject/providers'
-import Investors from './pages/investors'
-import ProjectDetails from './pages/projectDetails'
-// import data from './assets/data'
-import CreateProject from './pages/createProject'
+import { Layout } from "./components/Layout"
+import { AppRouter } from "./AppRouter"
+import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'
+import { Web3Modal } from '@web3modal/react'
+import { configureChains, createConfig, WagmiConfig } from 'wagmi'
+import { arbitrum, mainnet, polygon } from 'wagmi/chains'
 
-function getLibrary(provider: any) {
-  return new Web3Provider(provider)
-}
+const chains = [arbitrum, mainnet, polygon]
+const projectId = '19ca1952db43b1b4d5ddefdc4763ce0d'
 
-export default function App() {
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })])
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  connectors: w3mConnectors({ projectId, chains }),
+  publicClient
+})
+const ethereumClient = new EthereumClient(wagmiConfig, chains)
+
+const App = () => {
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Index />} />
-          <Route path='/login' element={<Index />} />
-          <Route path='/register' element={<Index />} />
-          <Route path='/admin' element={<Admin />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/user' element={<User />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/investors' element={<Investors />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/fundings' element={<Donation />} />
-          <Route path='/create-project' element={<CreateProject />} />
-          <Route path='/donate/:Id' element={<ProjectDetails />} />
-          <Route path='*' element={<h1>Page not Found!</h1>} />
-        </Routes>
-      </Router>
-    </Web3ReactProvider>
+    <>
+      <WagmiConfig config={wagmiConfig}>
+          <Layout >
+            <AppRouter />
+          </Layout>
+        </WagmiConfig>
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    </>
   )
 }
+export default App
