@@ -286,13 +286,13 @@ const Navbar = () => {
           ) : (
             <div className='flex flex-row gap-2 '>
               <div className='flex p-1 items-center'>
-                <button
+                {/* <button
                   className='ring-1 text-white text-base ring-stone-400 px-4 py-1 item-center mx-2 rounded-3xl'
                   type='submit'
                   onClick={() => switchNetwork()}
                 >
                   Switch wallet
-                </button>
+                </button> */}
                 <Web3NetworkSwitch />
               </div>
               <img
